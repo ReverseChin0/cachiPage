@@ -11,7 +11,10 @@ const newsPopupTimerMs = 2500;
 const LightWitch = () => {
 
   const [ currentNews, setNewspopup ] = useState(false);
-  let location = useLocation();  
+  const [ path, setPath ] = useState("");
+  const [ language, setLanguage ] = useState("EN");
+
+  let location = useLocation();
 
   useEffect(() => {
     
@@ -37,7 +40,7 @@ const LightWitch = () => {
 
         <div id="background-image-div"/>        
 
-        <Navbar/>
+        <Navbar setPath={setPath} previous={path}/>
         <SocialSidebar/>
         <Routes>
           <Route path="/*"        element={<p>emptyRouter</p>} />
