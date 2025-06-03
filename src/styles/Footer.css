@@ -1,0 +1,115 @@
+.footer-bar{
+    color: var(--secondary-color-link);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: rgba(var(--background-color-rgb), 0.75);
+    border-top: var(--secondary-color) 2px solid;
+}
+
+.footer-bar p{
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;    
+}
+
+.language-displayer{
+    margin-top: 0.25rem;
+    width: 30%;
+}
+
+.language-displayer p{
+    margin: 0;
+}
+
+.language-displayer svg{
+    fill: var(--primary-color);
+    max-height: 20px;
+}
+
+#language-btn{
+    color: var(--primary-color);
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    transition: color var(--transition-time), opacity var(--transition-time);
+
+    cursor: pointer;    
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#language-btn svg{
+    transition: fill var(--transition-time);
+}
+
+#language-btn:hover{
+    color: var(--accent-color);
+}
+
+#language-btn:hover svg{    
+    fill: var(--accent-color);
+}
+
+#language-selector{
+    display: flex;        
+    align-items: center;
+    justify-content: center;
+
+    flex-grow: 1;
+    justify-content: center;
+    
+    transition: opacity var(--transition-time);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#language-selector p{
+    cursor: pointer;
+
+    padding: 0 0.5rem;
+
+    border-left: var(--secondary-color) solid 1px;
+    border-right: var(--secondary-color) solid 1px;
+
+    transition: color var(--transition-time);
+}
+
+#language-selector p:first-of-type{
+    border-left: 0 solid var(--secondary-color);
+}
+
+#language-selector p:last-of-type{
+    border-right: 0 solid var(--secondary-color);
+}
+
+#language-selector p:hover{
+    color: var(--accent-color);
+}
+
+#language-selector.show-selector,#language-btn.show-selector{
+    opacity: 1;
+    pointer-events: all;
+}

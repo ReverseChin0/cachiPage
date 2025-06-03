@@ -1,0 +1,29 @@
+.sidebar{
+    --side-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    color: var(--primary-color);    
+    background: linear-gradient(90deg,var(--background-color) 0%, rgba(0, 0, 0, 0) 100%);
+    
+    position: absolute;
+    top: calc(50% - calc(var(--side-height)*0.5));
+        
+    height: var(--side-height);
+    padding: 1rem 0;
+}
+
+.sidebar > a{
+    height: calc(100% - calc(1rem * 0.3)) ;    
+}
+
+@media (max-width:640px) {
+
+    /* .sidebar{
+        display: none; 
+    } */
+
+}
