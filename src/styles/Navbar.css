@@ -84,3 +84,12 @@
     opacity: 1;
     pointer-events: all;
 }
+
+.navbar a{
+    color: var(--primary-color);
+    transition: color 200ms ease-in-out;
+}
+
+.navbar a:hover{
+    color: var(--accent-color);
+}

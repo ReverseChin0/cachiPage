@@ -57,8 +57,8 @@ const Navbar = (props:NavProps) => {
         <li><span onClick={ () => URLTest("news")}    >NEWS</span></li>
         <li><span onClick={ () => URLTest("games")}   >GAMES</span></li>
         <li><span onClick={ () => URLTest("about")}   >ABOUT</span> <span>US</span></li>
-        <li><span onClick={ () => URLTest("gallery")} >GALLERY</span></li>
-        <li><span onClick={ () => URLTest("store")}   >STORE</span></li>
+        <li><span onClick={ () => URLTest("gallery")} >GALLERY</span></li>        
+        <li><a href="#" target='blank'><span>STORE</span></a></li>
 
       </div>      
     </div>

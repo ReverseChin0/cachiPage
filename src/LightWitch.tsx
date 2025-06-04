@@ -2,12 +2,14 @@ import { Route, Routes, useLocation } from "react-router-dom"
 import SocialSidebar from "./components/SocialSidebar"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import About from "./views/About"
 import NewsPopup from "./components/NewsPopup"
 import News from "./views/News"
 import { englishNews } from "./data/newsData"
 import { sortedNews as sortNews } from "./utility/utility"
+import Gallery from "./views/Gallery"
+import Games from "./views/Games"
 
 const newsPopupTimerMs = 2500;
 
@@ -47,11 +49,11 @@ const LightWitch = () => {
         <Navbar setPath={setPath} previous={path}/>
         <SocialSidebar/>
         <Routes>
-          <Route path="/*"        />
-          <Route path="/EN/home"  element={<p>homeRouter</p>}/>
-          <Route path="/EN/news"  element={<News news={sortedNews}/>}/>
-          <Route path="/EN/about" element={<About/>}/>
-          <Route/>
+          <Route path="/*"        />          
+          <Route path="/EN/news"    element={<News news={sortedNews}/>}/>
+          <Route path="/EN/games"   element={<Games/>}/>
+          <Route path="/EN/about"   element={<About/>}/>
+          <Route path="/EN/gallery"   element={<Gallery/>}/>          
         </Routes>
 
         <NewsPopup
