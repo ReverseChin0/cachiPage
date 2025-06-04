@@ -1,19 +1,10 @@
-import { useEffect, useRef } from 'react'
+import type { NewsPopupProps } from '../data/types';
 import '../styles/NewsPopup.css'
 
-type newsProps = {
-  news:{
-    title:string,
-    message:string,
-    date:string
-  }[],
-  isVisible:boolean
-}
 
-const NewsPopup = (newsProps: newsProps ) => {
+const NewsPopup = ( { news, isVisible }: NewsPopupProps ) => {
 
-  const { title, date } = newsProps.news[0];
-  const {isVisible} = newsProps;
+  const { title, date } = news[0];
 
   return (
     <div id='news-popup' className={isVisible ? `news-popup showNews`:`news-popup`}>

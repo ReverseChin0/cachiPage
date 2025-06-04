@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar"
 import { useEffect, useRef, useState } from "react"
 import About from "./views/About"
 import NewsPopup from "./components/NewsPopup"
+import News from "./views/News"
+import { englishNews } from "./data/newsData"
+import { sortedNews as sortNews } from "./utility/utility"
 
 const newsPopupTimerMs = 2500;
 
@@ -31,6 +34,7 @@ const LightWitch = () => {
     }
   }, [])
   
+  const sortedNews = sortNews(englishNews);
 
   return (
     <>
@@ -43,21 +47,22 @@ const LightWitch = () => {
         <Navbar setPath={setPath} previous={path}/>
         <SocialSidebar/>
         <Routes>
-          <Route path="/*"        element={<p>emptyRouter</p>} />
+          <Route path="/*"        />
           <Route path="/EN/home"  element={<p>homeRouter</p>}/>
+          <Route path="/EN/news"  element={<News news={sortedNews}/>}/>
           <Route path="/EN/about" element={<About/>}/>
           <Route/>
         </Routes>
 
-        <NewsPopup 
-          isVisible = {currentNews}
+        <NewsPopup
           news={[
-              {
-                date:"11/02/2018",
-                title:"Webpage Launch!",
-                message: "This is a test"
-              }
+            {
+              date: "11/02/2018",
+              title: "Webpage Launch!",
+              message: "This is a test",
+            },
           ]}
+          isVisible={currentNews}
         />
         <Footer/>
     </>

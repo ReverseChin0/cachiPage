@@ -1,12 +1,20 @@
+import { aboutdata } from '../data/infoAbout'
 import '../styles/Frames.css'
 
 const About = () => {
+
+  const { title, message } = aboutdata;
+
   return (
-    <div className='frame'>
-        <h1>Shit</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab dolorum nulla fugit, est corrupti nam libero consectetur provident, explicabo alias perferendis quidem accusantium aperiam.</p>
+    <div className='frame-bg'>
+      <div>
+        <h2>{title}</h2>
+        <div dangerouslySetInnerHTML={{__html:message}}>
+        </div>        
+      </div>
     </div>
   )
+
 }
 
 export default About

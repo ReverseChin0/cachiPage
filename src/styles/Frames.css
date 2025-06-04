@@ -1,3 +1,56 @@
-.frame{
-    background-image: url('/img/helper/SmallerFrame.png');
+.frame-bg{
+    font-family: Lora;
+    font-size: 1.2em;
+
+    position: absolute;
+    color: var(--primary-color);
+
+    transform: translate(-50%,50%);
+
+    bottom: 50%;
+    left: 50%;
+
+    max-width: 1565px;
+    max-height: 817px;
+
+    width: 60vw;
+
+    aspect-ratio: 15/8;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.frame-bg::before{
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: var(--main-frame-background);      
+    background-size: 100% 100%;        
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.frame-bg > div{
+    width: 100%;
+    padding: 2rem 3vw;
+}
+
+.news-frame{
+    overflow: scroll;
+}
+
+.new-item{
+    border-bottom: solid var(--primary-color) 2px;
+}
+
+.new-item h3, .new-item h5, .new-item p{
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
 }
