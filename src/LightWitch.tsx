@@ -34,7 +34,7 @@ const LightWitch = () => {
     return () => {
       clearTimeout(timeoutNewsPopup);
     }
-  }, [])
+  }, [])  
   
   const sortedNews = sortNews(englishNews);
 
@@ -44,15 +44,17 @@ const LightWitch = () => {
             <img src="img/logos/LW logo color opt.png" alt="no_photo" />
         </div>
 
-        <div id="background-image-div"/>        
+        <div id="background-image-div"/>
 
         <Navbar setPath={setPath} previous={path}/>
+
         <SocialSidebar/>
+
         <Routes>
-          <Route path="/*"        />          
-          <Route path="/EN/news"    element={<News news={sortedNews}/>}/>
-          <Route path="/EN/games"   element={<Games/>}/>
-          <Route path="/EN/about"   element={<About/>}/>
+          <Route path="/*"            element={<></>}  />          
+          <Route path="/EN/news"      element={<News news={sortedNews}/>}/>
+          <Route path="/EN/games"     element={<Games/>}/>
+          <Route path="/EN/about"     element={<About/>}/>
           <Route path="/EN/gallery"   element={<Gallery/>}/>          
         </Routes>
 
@@ -64,7 +66,8 @@ const LightWitch = () => {
               message: "This is a test",
             },
           ]}
-          isVisible={currentNews}
+          delayPassed={currentNews}
+          isOnMainPage={path === '/' || path === ''}
         />
         <Footer/>
     </>

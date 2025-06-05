@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import '../styles/Navbar.css'
+import { useRef } from 'react'
 
 type NavProps = {
   setPath:(newPath:string) => void,
@@ -9,6 +10,7 @@ type NavProps = {
 const Navbar = (props:NavProps) => {
   
   const { previous, setPath } = props;
+  const newUrl = useRef("")
   let navigate = useNavigate();
 
   function URLTest(url:string){
@@ -17,6 +19,7 @@ const Navbar = (props:NavProps) => {
     setPath(url);
 
     if(url === '/'){
+      newUrl.current = '/';
       navigate('/');
       window.location.reload();
       return;
@@ -25,16 +28,24 @@ const Navbar = (props:NavProps) => {
     const backgroundDiv = document.getElementById("background-image-div");
 
     if(url === previous){
+      newUrl.current ='/';
       navigate('/');
       setPath('');
        backgroundDiv?.classList.remove("blur");
     }else{
       backgroundDiv?.classList.add("blur");
+      newUrl.current = `EN/${url}`;
       navigate(`EN/${url}`);
     }        
   }
 
-  function showNavbar(show:boolean) {    
+  function showNavbar(show:boolean) {
+
+    // console.log(newUrl.current,"🦕");
+    if(newUrl.current !== '/' && newUrl.current !== ''){
+      return;
+    }    
+
     let interNavbar = document.getElementById("interactable-navbar");
     if(show){
       interNavbar?.classList.add("show-navbar");

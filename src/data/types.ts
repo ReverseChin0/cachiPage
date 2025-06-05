@@ -6,5 +6,6 @@ export type NewsItem = {
 
 export type NewsPopupProps = {
   news: NewsItem[];
-  isVisible: boolean;
+  delayPassed: boolean;
+  isOnMainPage?: boolean;
 };
