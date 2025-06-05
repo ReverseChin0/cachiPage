@@ -2,7 +2,7 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-hours worked so far 8, 16, 24
+hours worked so far 8, 16, 24, 32,
 
 - todo
 [x] make image center at any resolution

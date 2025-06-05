@@ -1,17 +1,27 @@
 import { useNavigate } from 'react-router-dom'
 import '../styles/Navbar.css'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 type NavProps = {
   setPath:(newPath:string) => void,
-  previous?:string
+  previous?:string,
+  location?: string
 }
 
 const Navbar = (props:NavProps) => {
-  
-  const { previous, setPath } = props;
+
+  const { previous, setPath, location } = props;
   const newUrl = useRef("")
   let navigate = useNavigate();
+
+  useEffect(() => {
+    const onlyPath = location?.split("/").pop();
+    if(location !== "/" && onlyPath != null ){
+      URLTest(onlyPath);
+      document.getElementById("interactable-navbar")?.classList.add("show-navbar");
+    }      
+  }, [])
+  
 
   function URLTest(url:string){
 
@@ -67,7 +77,7 @@ const Navbar = (props:NavProps) => {
 
         <li><span onClick={ () => URLTest("news")}    >NEWS</span></li>
         <li><span onClick={ () => URLTest("games")}   >GAMES</span></li>
-        <li><span onClick={ () => URLTest("about")}   >ABOUT</span> <span>US</span></li>
+        <li><span onClick={ () => URLTest("about")}   >ABOUT US</span></li>
         <li><span onClick={ () => URLTest("gallery")} >GALLERY</span></li>        
         <li><a href="#" target='blank'><span>STORE</span></a></li>
 

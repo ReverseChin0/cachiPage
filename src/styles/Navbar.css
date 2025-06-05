@@ -22,14 +22,11 @@
     flex-grow: 1;
 
     border-left: var(--secondary-color) 1px solid;
-    border-right: var(--secondary-color) 1px solid;
-
-    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
-    cursor: pointer;
+    border-right: var(--secondary-color) 1px solid;    
 }
 
-.navbar li:hover{
-    /* transform: scale(1.1); */
+.navbar span:hover{
+    transform: scale(1.1);
     color: var(--accent-color);
 }
 
@@ -42,7 +39,9 @@
 }
 
 .navbar span{
-    display: inline-block
+    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .navbar span::first-letter{    
@@ -50,13 +49,13 @@
 }
 
 .nav-img{    
-    width: 18vw;
-    cursor: pointer;
+    width: 18vw;    
 }
 
 .nav-img>img{
     transform: translateY(0%) rotateZ(30deg) scale(0.65);
     width: 100%;
+    cursor: pointer;
 }
 
 .navbar li{
@@ -92,4 +91,8 @@
 
 .navbar a:hover{
     color: var(--accent-color);
+}
+
+.new-item:last-child{
+    border-bottom: none;
 }

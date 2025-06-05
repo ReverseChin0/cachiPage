@@ -3,17 +3,17 @@ import '../styles/SocialSidebar.css'
 const SocialSidebar = () => {
   return (
     <div className="sidebar">
-        <a href='facbook' target='blank' className='icon-btn facebook'>          
+        <a href='https://pomodorotimer.online/' target='_blank' className='icon-btn facebook'>          
           <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" >
             <path d="m800 400c0-220.9-179.1-400-400-400-220.9 0-400 179.1-400 400 0 220.9 179.1 400 400 400 1.1 0 2.3-0.1 3.4-0.1v-279h-96.3v-111.6h96.3v-82.2c0-95.5 58.3-147.4 143.5-147.4 40.8 0 75.8 3 86 4.3v99.8h-59c-46.3 0-55.3 22-55.3 54.3v71.2h110.4l-14.3 111.6h-96.1v261.2c163-50.5 281.4-202.5 281.4-382.1z"/>
           </svg>
         </a>
-        <a href='instagram' target='blank' className='icon-btn instagram'>          
+        <a href='https://pomodorotimer.online/' target='_blank' className='icon-btn instagram'>          
           <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
             <path id="&lt;Compound Path&gt;" fillRule="evenodd" d="m693.8 1000.6h-387.6c-168.9 0-306.2-137.3-306.2-306.1v-387.7c0-168.8 137.3-306.2 306.2-306.2h387.6c168.9 0 306.2 137.4 306.2 306.2v387.7c0 168.8-137.3 306.1-306.2 306.1zm-387.6-925.1c-127.6 0-231.3 103.8-231.3 231.3v387.7c0 127.5 103.7 231.3 231.3 231.3h387.6c127.6 0 231.3-103.8 231.3-231.3v-387.7c0-127.5-103.7-231.3-231.3-231.3zm193.9 678.1c-139.9 0-253-113.1-253-253 0-139.9 113.1-252.9 253-252.9 139.9 0 252.9 113 252.9 252.9 0 139.9-113 253-252.9 253zm176.3-253c0-97.4-78.8-176.2-176.3-176.2-97.5 0-176.3 78.8-176.3 176.2 0 97.5 78.8 176.3 176.3 176.3 97.5 0 176.3-78.8 176.3-176.3zm104.2-214.6c-36.5 0-65.9-29.4-65.9-65.8 0-36.5 29.4-65.9 65.9-65.9 36.4 0 65.8 29.4 65.8 65.9 0 36.4-29.4 65.8-65.8 65.8z"/>
           </svg>
         </a>
-        <a href='twitter' target='blank' className='icon-btn twitter'>          
+        <a href='https://pomodorotimer.online/' target='_blank' className='icon-btn twitter'>          
           <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2122 2122">
             <path id="&lt;Compound Path&gt;" fillRule="evenodd" d="m2097.2 2122h-610.8l-41.2-59.8-531-771.5-714.5 831.3h-176.2l812.2-945.3-660.9-960.2-148.9-216.5h610.7l41.2 59.8 497 722.1 521.8-607.3 150.8-174.6h176.2l-770.2 896.1 694.8 1009.4zm-262.8-138.1l-674.1-979.4-78.5-114.1-517.7-752.2h-275.4l640.1 930.1 78.6 114.1 551.7 801.5z"/>
           </svg>

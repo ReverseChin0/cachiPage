@@ -46,7 +46,7 @@ const LightWitch = () => {
 
         <div id="background-image-div"/>
 
-        <Navbar setPath={setPath} previous={path}/>
+        <Navbar setPath={setPath} previous={path} location={location.pathname}/>
 
         <SocialSidebar/>
 
