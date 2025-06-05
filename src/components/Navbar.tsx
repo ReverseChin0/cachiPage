@@ -65,8 +65,8 @@ const Navbar = (props:NavProps) => {
   }
 
   return (
-    <div className="navbar" 
-        onMouseEnter={ () => { showNavbar(true);} } 
+    <div className="navbar"
+        onMouseEnter={ () => { showNavbar(true);} }
         onMouseLeave={ () => { showNavbar(false); } }
     >
       <div id='interactable-navbar'>
