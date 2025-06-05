@@ -14,7 +14,8 @@
 
   --background-img-path: url('/studio_20240302_EX_opt.png');
   --news-popup-background: url('/img/helper/NewsfeedBox.png');
-  --main-frame-background: url('/img/helper/SmallerFrame.png')
+  --main-frame-background: url('/img/helper/SmallerFrame.png');
+  --frame-opacity: 0.75;
 }
 
 @font-face{
