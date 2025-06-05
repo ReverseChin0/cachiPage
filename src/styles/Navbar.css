@@ -1,20 +1,10 @@
 .navbar{
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center;     */
-
-    background: linear-gradient(180deg,var(--background-color) 0%, rgba(0, 0, 0, 0) 100%);
-
-    padding-right: 18vw;  
-    /* padding-left: 18vw;  */
-    padding-left: 4vw;
     height: 20vh;   
 }
 
 .navbar li{
     font-family: 'Bellefair';
-    font-size: 1.75rem;
-    font-weight: bold;
+    font-size: 1.75rem;    
 
     padding: 0.5rem 0;
 
@@ -63,19 +53,25 @@
 }
 
 #interactable-navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background: linear-gradient(180deg,var(--background-color) 0%, rgba(0, 0, 0, 0) 100%);
 
-    width: 100%;
+    padding-right: 18vw;
+    padding-left: 4vw;  
     height: 100%;
     
-    transform: translateY(50%);
+    transform: translateY(-50%);
 
     opacity: 0;
     pointer-events: none;
 
     transition: all var(--transition-time);
+}
+
+#interactable-navbar>div{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #interactable-navbar.show-navbar{

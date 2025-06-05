@@ -70,16 +70,17 @@ const Navbar = (props:NavProps) => {
         onMouseLeave={ () => { showNavbar(false); } }
     >
       <div id='interactable-navbar'>
+        <div>
+          <div className="nav-img">
+            <img onClick={ () => URLTest("/")} src="/img/logos/LogoJustText.png" alt="no-logo" />
+          </div>
 
-        <div className="nav-img">
-          <img onClick={ () => URLTest("/")} src="/img/logos/LogoJustText.png" alt="no-logo" />
+          <li><span onClick={ () => URLTest("news")}    >NEWS</span></li>
+          <li><span onClick={ () => URLTest("games")}   >GAMES</span></li>
+          <li><span onClick={ () => URLTest("about")}   >ABOUT US</span></li>
+          <li><span onClick={ () => URLTest("gallery")} >GALLERY</span></li>        
+          <li><a href="#" target='_blank'><span>STORE</span></a></li>
         </div>
-
-        <li><span onClick={ () => URLTest("news")}    >NEWS</span></li>
-        <li><span onClick={ () => URLTest("games")}   >GAMES</span></li>
-        <li><span onClick={ () => URLTest("about")}   >ABOUT US</span></li>
-        <li><span onClick={ () => URLTest("gallery")} >GALLERY</span></li>        
-        <li><a href="#" target='blank'><span>STORE</span></a></li>
 
       </div>      
     </div>
