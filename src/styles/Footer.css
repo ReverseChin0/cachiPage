@@ -1,21 +1,24 @@
 .footer-bar{
-    color: var(--secondary-color-link);
-
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 
     display: flex;
-    justify-content: space-around;
-    
+    align-items: center;
+
     background-color: rgba(var(--background-color-rgb), 0.75);
     border-top: var(--secondary-color) 2px solid;
 }
 
+.footer-bar>*{
+    flex-grow: 1;
+    text-align: center;
+}
+
 .footer-bar p{
-    margin-top: 0.25rem;
-    margin-bottom: 0.75rem;    
+    margin: 0.3rem 0;
+    color: var(--secondary-color);
 }
 
 .language-displayer{
@@ -27,13 +30,16 @@
     margin: 0;
 }
 
-.language-displayer svg{
+#language-btn svg{
     fill: var(--primary-color);
     max-height: 20px;
 }
 
-#language-btn{
+#language-btn>p{
     color: var(--primary-color);
+}
+
+#language-btn{    
 
     display: flex;
     gap: 0.5rem;
@@ -42,23 +48,18 @@
 
     transition: color var(--transition-time), opacity var(--transition-time);
 
-    cursor: pointer;    
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; 
+    cursor: pointer;
 
     opacity: 0;
-    pointer-events: none;
+
+    transform: translateX(50%);
 }
 
 #language-btn svg{
     transition: fill var(--transition-time);
 }
 
-#language-btn:hover{
+#language-btn:hover p{
     color: var(--accent-color);
 }
 
@@ -68,22 +69,14 @@
 
 #language-selector{
     display: flex;        
-    align-items: center;
-    justify-content: center;
-
-    flex-grow: 1;
-    justify-content: center;
+    align-items: center;    
+    justify-content: center;    
     
     transition: opacity var(--transition-time);
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
     opacity: 0;
     pointer-events: none;
+    transform: translateX(-50%);
 }
 
 #language-selector p{
@@ -94,7 +87,7 @@
     border-left: var(--secondary-color) solid 1px;
     border-right: var(--secondary-color) solid 1px;
 
-    transition: color var(--transition-time);
+    transition: color var(--transition-time);    
 }
 
 #language-selector p:first-of-type{
