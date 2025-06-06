@@ -1,10 +1,12 @@
-*{
+:root{
   --primary-color: #f1f1e6;
   --secondary-color: #cecbec;
   --secondary-color-link: #bcb0ff;
   --background-color: #494863;
   --accent-color: #cca715;
   --background-color-rgb: 73, 72, 99;
+
+  --main-frame-opacity: 0.75;
 
   --show-logo-duration: 700ms;
   --intro-animation-delay: 200ms;
@@ -15,7 +17,7 @@
   --background-img-path: url('/studio_20240302_EX_opt.png');
   --news-popup-background: url('/img/helper/NewsfeedBox.png');
   --main-frame-background: url('/img/helper/SmallerFrame.png');
-  --frame-opacity: 0.75;
+  --slides-arrow-background: url('/icons/system_arrow.png');
 }
 
 @font-face{
@@ -86,7 +88,7 @@ body {
 .icon-btn > svg{  
   fill: var(--primary-color);
   transform: scale(1);
-  transition: fill var(--transition-time), transform 150ms;
+  transition: fill var(--transition-time), transform var(--transition-time);
 }
 
 .icon-btn > svg:hover{

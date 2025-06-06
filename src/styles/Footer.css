@@ -18,7 +18,7 @@
 
 .footer-bar p{
     margin: 0.3rem 0;
-    color: var(--secondary-color);
+    color: var(--secondary-color-link);
 }
 
 .language-displayer{

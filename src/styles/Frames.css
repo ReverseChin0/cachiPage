@@ -34,7 +34,7 @@
 
     background-image: var(--main-frame-background);      
     background-size: 100% 100%;        
-    opacity: var(--frame-opacity);
+    opacity: var(--main-frame-opacity);
     z-index: -1;
 }
 

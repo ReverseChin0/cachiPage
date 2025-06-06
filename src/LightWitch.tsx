@@ -10,6 +10,7 @@ import { englishNews } from "./data/newsData"
 import { sortedNews as sortNews } from "./utility/utility"
 import Gallery from "./views/Gallery"
 import Games from "./views/Games"
+import { gamesData } from "./data/infoGame"
 
 const newsPopupTimerMs = 2500;
 
@@ -53,9 +54,9 @@ const LightWitch = () => {
         <Routes>
           <Route path="/*"            element={<></>}  />          
           <Route path="/EN/news"      element={<News news={sortedNews}/>}/>
-          <Route path="/EN/games"     element={<Games/>}/>
+          <Route path="/EN/games"     element={<Games gamesdata={gamesData}/>}/>
           <Route path="/EN/about"     element={<About/>}/>
-          <Route path="/EN/gallery"   element={<Gallery/>}/>          
+          <Route path="/EN/gallery"   element={<Gallery/>}/>
         </Routes>
 
         <NewsPopup

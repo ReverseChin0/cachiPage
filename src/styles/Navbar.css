@@ -29,7 +29,7 @@
 }
 
 .navbar span{
-    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+    transition: transform var(--transition-time) ease-in-out, color var(--transition-time) ease-in-out;
     display: inline-block;
     cursor: pointer;
 }
@@ -82,7 +82,7 @@
 
 .navbar a{
     color: var(--primary-color);
-    transition: color 200ms ease-in-out;
+    transition: color var(--transition-time) ease-in-out;
 }
 
 .navbar a:hover{
