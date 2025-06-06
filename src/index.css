@@ -169,8 +169,8 @@ body {
   position: absolute;
 
   background-image: var(--background-img-path);
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-repeat: no-repeat;  
+  background-size: cover;
   background-position-x: center;
 
   transition: filter var(--transition-time);  
