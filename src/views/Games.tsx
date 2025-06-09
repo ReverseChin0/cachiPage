@@ -1,9 +1,9 @@
 import '../styles/Slides.css'
 import { useEffect, useState } from "react";
-import type { gameProps } from "../data/types";
+import type { GameProps } from "../data/types";
 
 type gameViewProps = {
-  gamesdata:gameProps[]
+  gamesdata:GameProps[]
 }
 
 const Games = (props: gameViewProps) => {
@@ -27,11 +27,11 @@ const Games = (props: gameViewProps) => {
   return (
     <div className='frame-bg'>
       <div>
-        <section className="section">
+        <section>
           <div className="section-center" onClick={(e) => {console.log("click",e.currentTarget);
           }}>
             {
-              games.map((game: gameProps, gameIndex: number) => {
+              games.map((game: GameProps, gameIndex: number) => {
                 const { id, layout, title, images, quote } = game;
 
                 let position = 'nextSlide';
@@ -66,7 +66,7 @@ const Games = (props: gameViewProps) => {
             <button className="next" onClick={() => setIndex(index + 1)}/>                          
 
             <div className="dots">
-              {games.map((_:gameProps, dotIndex:number) => (
+              {games.map((_:GameProps, dotIndex:number) => (
                 <span
                   key={dotIndex}
                   className={`dot ${index === dotIndex ? 'active-dot' : ''}`}

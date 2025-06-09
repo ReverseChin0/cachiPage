@@ -1,12 +1,27 @@
-import React from 'react'
+import type { GalleryItem } from '../data/types';
+import '../styles/Frames.css';
 
-type Props = {}
+type galleryProps = {
+  data: GalleryItem[];
+}
 
-const Gallery = (props: Props) => {
-  return (    
-    <div className='frame-bg'>
-      <div>
-        <h2>Gallery</h2>        
+const Gallery = (props: galleryProps) => {
+
+  const { data } = props;
+
+  return (
+    <div className='frame-bg gallery'>                   
+      <div className="news">
+        <div className="news-scroll">
+          <h1>Gallery</h1>
+          <div className='gallery-grid'>
+            {
+              data.map( (imageData,index) => {
+                return <div></div>                                
+              })
+            }
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -10,10 +10,17 @@ export type NewsPopupProps = {
   isOnMainPage?: boolean;
 };
 
-export type gameProps = {
+export type GameProps = {
   id:number,
   layout:number,
   title:string,
   images:string[],
   quote:string
+}
+
+export type GalleryItem = {
+  title:string,
+  subtitle:string,
+  image:string,
+  thumbnail:string
 }
