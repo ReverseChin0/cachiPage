@@ -11,11 +11,9 @@ export type NewsPopupProps = {
 };
 
 export type GameProps = {
-  id:number,
-  layout:number,
+  id:number,  
   title:string,
-  images:string[],
-  quote:string
+  images:string[],  
 }
 
 export type GalleryItem = {

@@ -27,12 +27,10 @@ const Games = (props: gameViewProps) => {
   return (
     <div className='frame-bg'>
       <div>
-        <section>
-          <div className="section-center" onClick={(e) => {console.log("click",e.currentTarget);
-          }}>
+          <div className="section-center">
             {
               games.map((game: GameProps, gameIndex: number) => {
-                const { id, layout, title, images, quote } = game;
+                const { id, title, images } = game;
 
                 let position = 'nextSlide';
 
@@ -53,9 +51,8 @@ const Games = (props: gameViewProps) => {
                       {
                         images.map((image,index) => <img className='game-img' key={`${id}_image_${index}`} src={image}/>)
                       }
-                    </div>                    
-                    <h4>{title}</h4>                  
-                    <p className="text">{quote}</p>
+                    </div>
+                    <h4>{title}</h4>                    
                   </article>
                 );
               })
@@ -75,8 +72,6 @@ const Games = (props: gameViewProps) => {
               ))}
             </div>
           </div>
-        </section>
-
       </div>
     </div>
   )
