@@ -20,5 +20,6 @@ export type GalleryItem = {
   title:string,
   subtitle:string,
   image:string,
-  thumbnail:string
+  thumbnail:string,
+  description:string
 }

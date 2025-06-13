@@ -10,7 +10,7 @@ const Games = (props: gameViewProps) => {
 
   const {gamesdata} = props;
 
-  const [games, setGames] = useState(gamesdata);
+  const [games] = useState(gamesdata);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

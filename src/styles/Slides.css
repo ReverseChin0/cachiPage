@@ -34,9 +34,7 @@
 
   text-align: center;
   position: relative;  
-  overflow: hidden;
-
-  /* cursor: pointer; */
+  overflow: hidden;  
 }
 
 .game-img {
@@ -164,4 +162,33 @@ article.nextSlide {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+}
+
+.section-about {
+  margin: 0 auto;
+  font-size: 0.95rem;
+  
+  width: 90%;
+  height: 100%;
+  max-width: 100%;
+  
+  position: relative;  
+  /* overflow: hidden;   */
+  /* cursor: pointer; */
+}
+
+.section-about .prev,
+.section-about .next {
+  
+  width: 72px;
+  background-size: 100%;
+}
+
+.section-about .prev {
+  left: -10%;
+  transform: translateY(-50%) rotateZ(180deg);
+}
+
+.section-about .next {
+  right: -10%;
 }
