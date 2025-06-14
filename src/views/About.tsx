@@ -44,21 +44,11 @@ const About = () => {
 
                 return (
                   <article className={position} key={msgIndex}>
-                    {/* <div className='flex-horizontal'>
-                      {
-                        images.map((image,index) => <img className='game-img' key={`${id}_image_${index}`} src={image}/>)
-                      }
-                    </div>
-                    <h4>{title}</h4>*/}
                     <div dangerouslySetInnerHTML={{__html:message}}></div>
                   </article>
                 );
               })
-            }
-
-            <button className="prev" onClick={() => setIndex(index - 1)}/>                          
-
-            <button className="next" onClick={() => setIndex(index + 1)}/>                          
+            }                                      
 
             <div className="dots">
               {messages.map((_:string, dotIndex:number) => (
@@ -70,6 +60,8 @@ const About = () => {
               ))}
             </div>
           </div>
+          <button className="prev about" onClick={() => setIndex(index - 1)}/>                          
+          <button className="next about" onClick={() => setIndex(index + 1)}/>
       </div>
     </div>
     

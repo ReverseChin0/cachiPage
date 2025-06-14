@@ -173,22 +173,22 @@ article.nextSlide {
   max-width: 100%;
   
   position: relative;  
-  /* overflow: hidden;   */
+  overflow: hidden;  
   /* cursor: pointer; */
 }
 
-.section-about .prev,
-.section-about .next {
+.about.prev,
+.about.next {
   
   width: 72px;
   background-size: 100%;
 }
 
-.section-about .prev {
-  left: -10%;
+.about.prev {
+  left: 2%;
   transform: translateY(-50%) rotateZ(180deg);
 }
 
-.section-about .next {
-  right: -10%;
+.about.next {
+  right: 2%;
 }

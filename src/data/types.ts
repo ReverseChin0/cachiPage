@@ -19,7 +19,8 @@ export type GameProps = {
 export type GalleryItem = {
   title:string,
   subtitle:string,
-  image:string,
+  downloadImage:string,
+  previewImage:string,
   thumbnail:string,
   description:string
 }
