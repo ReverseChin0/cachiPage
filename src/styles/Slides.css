@@ -192,3 +192,26 @@ article.nextSlide {
 .about.next {
   right: 2%;
 }
+
+.gallery-carrousel{
+    max-height: 75%;
+}
+
+.gallery-carrousel article{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gal.prev {
+  left: 5%;
+  transform: translateY(-50%) rotateZ(180deg);
+}
+
+.gal.next {
+  right: 5%;
+}
+
+.gallery-carrousel.hide{
+  display: none;
+}

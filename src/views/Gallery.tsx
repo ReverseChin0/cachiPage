@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import GalleryCarrousel from '../components/GalleryCarrousel';
+import GalleryScrollView from '../components/GalleryScrollView';
 import type { GalleryItem } from '../data/types';
 import '../styles/Frames.css';
 
@@ -8,35 +11,20 @@ type galleryProps = {
 const Gallery = (props: galleryProps) => {
 
   const { data } = props;
+  const [ show, setShow ] = useState(true);
+  const [ indexInitial, setInitial ] = useState(0);
 
   const clickedGalleryImg = (index:number) => {
-    console.log("clicked Img 😱",index);    
-
+    console.log("clicked Img 😱",index);
+    setShow(!show);
+    setInitial(index);
   }
 
   return (
-    <div className='frame-bg gallery'>                   
-      <div className="news">
-        <div className="news-scroll">
-          <h1>Gallery</h1>
-          <div className='gallery-grid'>
-            {
-              data.map( (imageData:GalleryItem,index) => {
-                return <div 
-                onClick={ 
-                  () => { clickedGalleryImg(index); }
-                }
-                key={`Gallery_${index}`}> 
-                  <img src={imageData.thumbnail} alt="no_thumbnail_available" />
-                </div>
-              })
-            }
-          </div>
-        </div>
-        {/* <div className='carrousel-view'>
-
-        </div> */}
-      </div>
+    <div className='frame-bg gallery'> 
+      <h3>Gallery</h3>
+      <GalleryScrollView data={data} onClickedGallImg={clickedGalleryImg} show={show} />
+      <GalleryCarrousel initial={indexInitial} data={data} show={!show}/>
     </div>
   )
 }

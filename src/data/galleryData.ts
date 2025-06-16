@@ -23,7 +23,7 @@ export const galleryEn = [
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
-        title:'-Monthly Illustration 1-',
+        title:'-Monthly Illustration 2-',
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
@@ -46,7 +46,7 @@ export const galleryEn = [
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
-        title:'-Monthly Illustration 1-',
+        title:'-Monthly Illustration 3-',
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
@@ -69,7 +69,7 @@ export const galleryEn = [
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
-        title:'-Monthly Illustration 1-',
+        title:'-Monthly Illustration 4-',
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
@@ -92,7 +92,7 @@ export const galleryEn = [
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
-        title:'-Monthly Illustration 1-',
+        title:'-Monthly Illustration 5-',
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
@@ -115,7 +115,7 @@ export const galleryEn = [
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
-        title:'-Monthly Illustration 1-',
+        title:'-Monthly Illustration 6-',
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
