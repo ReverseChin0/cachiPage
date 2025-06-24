@@ -27,7 +27,7 @@ export const galleryEn = [
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
-        thumbnail:'/img/logos/LW logo color opt.png',
+        thumbnail:'/testing/1.png',
         description:`Fun Fact: This illustration was actually finished back in April 2024. 
 
         It's been sitting around for a year waiting to be shown to the public. 
@@ -50,7 +50,7 @@ export const galleryEn = [
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
-        thumbnail:'/img/logos/LW logo color opt.png',        
+        thumbnail:'/testing/2.png',        
         description:`Fun Fact: This illustration was actually finished back in April 2024. 
 
         It's been sitting around for a year waiting to be shown to the public. 
@@ -71,9 +71,9 @@ export const galleryEn = [
     {
         title:'-Monthly Illustration 4-',
         subtitle:'Illustration by VOFAN',
-        downloadImage:'/img/gallery/studio_20240302_EX.png',
+        downloadImage:'/icons/download_45dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png',
         previewImage:'',
-        thumbnail:'/img/logos/LW logo color opt.png',        
+        thumbnail:'/testing/3.jpg',        
         description:`Fun Fact: This illustration was actually finished back in April 2024. 
 
         It's been sitting around for a year waiting to be shown to the public. 
@@ -96,7 +96,7 @@ export const galleryEn = [
         subtitle:'Illustration by VOFAN',
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
-        thumbnail:'/img/logos/LW logo color opt.png',        
+        thumbnail:'/testing/4.ico',        
         description:`Fun Fact: This illustration was actually finished back in April 2024. 
 
         It's been sitting around for a year waiting to be shown to the public. 

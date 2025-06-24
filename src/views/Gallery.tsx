@@ -12,7 +12,7 @@ const Gallery = (props: galleryProps) => {
 
   const { data } = props;
   const [ show, setShow ] = useState(true);
-  const [ indexInitial, setInitial ] = useState(0);
+  const [ indexInitial, setInitial ] = useState<number|null>(null);
 
   const clickedGalleryImg = (index:number) => {
     console.log("clicked Img 😱",index);

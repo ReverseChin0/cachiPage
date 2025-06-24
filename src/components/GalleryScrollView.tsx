@@ -18,10 +18,10 @@ const GalleryScrollView = (props: galleryScrollviewProps) => {
             {
                 data.map( (imageData:GalleryItem,index) => {
                 return <div 
-                onClick={ 
-                    () => { onClickedGallImg(index); }
-                }
-                key={`Gallery_${index}`}> 
+                  onClick={ 
+                      () => { onClickedGallImg(index); }
+                  }
+                  key={`Gallery_${index}`}> 
                     <img src={imageData.thumbnail} alt="no_thumbnail_available" />
                 </div>
                 })

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { GalleryItem } from '../data/types';
 
 type GallCarrouselProps = {
-    initial:number,
+    initial:number|null,
     data: GalleryItem[],
     show?: boolean
 }
@@ -11,24 +11,25 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
 
     const { show, initial } = props;
     const [ galleryImages ] = useState(props.data);
-    const [ index, setIndex ] = useState(initial);
+    const [ index, setIndex ] = useState(initial); //    
+    
+    useEffect(() => {      
+      setIndex(initial); // Parent controlled update
+    }, [initial]);
 
-    // useEffect(() => {
-
-    //     setIndex(initial);
-
-    // }, [initial])
-
-    useEffect(() => {
-
+    useEffect(() => {        
+        
         const lastIndex = galleryImages.length - 1;
+
+        if(index == null)
+          return;
 
         if(index < 0){
             setIndex(lastIndex);
         }
         if(index > lastIndex){
             setIndex(0);
-        }                       
+        }        
 
     }, [index, galleryImages]);
 
@@ -48,7 +49,6 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
                     imgElement = <img className='gal-img-carrousel' src={previewImage} alt={"preview Image should be here :("}/>
                 }
                     
-
                 let position = 'nextSlide';
 
                 if (imgIndex === index) {
@@ -56,7 +56,7 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
                 }
 
                 if (
-                  imgIndex === index - 1 ||
+                  imgIndex === index! - 1 ||
                   (index === 0 && imgIndex === galleryImages.length - 1)
                 ) {
                   position = 'lastSlide';
@@ -69,18 +69,9 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
                 );
               })
             }                                      
-            {/* <div className="dots">
-              {messages.map((_:string, dotIndex:number) => (
-                <span
-                  key={dotIndex}
-                  className={`dot ${index === dotIndex ? 'active-dot' : ''}`}
-                  onClick={() => setIndex(dotIndex)}
-                />
-              ))}
-            </div> */}
           </div>
-          <button className="prev gal" onClick={() => setIndex(index - 1)}/>                          
-          <button className="next gal" onClick={() => setIndex(index + 1)}/>
+          <button className="prev gal" onClick={() => setIndex(index! - 1)}/>                          
+          <button className="next gal" onClick={() => setIndex(index! + 1)}/>
       </div>
   )
 }

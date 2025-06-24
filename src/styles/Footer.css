@@ -35,7 +35,8 @@
     max-height: 20px;
 }
 
-#language-btn>p{
+#language-btn>#language-text{
+    transition: color var(--transition-time);
     color: var(--primary-color);
 }
 
@@ -46,7 +47,7 @@
     align-items: center;
     justify-content: center;
 
-    transition: color var(--transition-time), opacity var(--transition-time);
+    /* transition: color var(--transition-time), opacity var(--transition-time); */
 
     cursor: pointer;
 
@@ -59,13 +60,10 @@
     transition: fill var(--transition-time);
 }
 
-#language-btn:hover p{
+#language-btn:hover #language-text,#language-btn:hover svg{  
     color: var(--accent-color);
-}
-
-#language-btn:hover svg{    
     fill: var(--accent-color);
-}
+}  
 
 #language-selector{
     display: flex;        
