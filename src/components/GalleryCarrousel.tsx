@@ -4,12 +4,13 @@ import type { GalleryItem } from '../data/types';
 type GallCarrouselProps = {
     initial:number|null,
     data: GalleryItem[],
-    show?: boolean
+    show?: boolean,
+    selectImage: (indexnumber:number) => void
 }
 
 const GalleryCarrousel = (props: GallCarrouselProps) => {
 
-    const { show, initial } = props;
+    const { show, initial, selectImage } = props;
     const [ galleryImages ] = useState(props.data);
     const [ index, setIndex ] = useState(initial); //    
     
@@ -44,9 +45,9 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
                 
                 let imgElement;
                 if( previewImage == null || previewImage == '' ) {
-                    imgElement = <img className='gal-img-carrousel' src={thumbnail} alt={"no thumbnail Image :("}/>
+                    imgElement = <img onClick={()=>{selectImage(imgIndex)}} className='gal-img-carrousel' src={thumbnail} alt={"no thumbnail Image :("}/>
                 }else{
-                    imgElement = <img className='gal-img-carrousel' src={previewImage} alt={"preview Image should be here :("}/>
+                    imgElement = <img onClick={()=>{selectImage(imgIndex)}} className='gal-img-carrousel' src={previewImage} alt={"preview Image should be here :("}/>
                 }
                     
                 let position = 'nextSlide';
