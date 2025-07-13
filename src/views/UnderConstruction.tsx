@@ -11,7 +11,7 @@ const UnderConstruction = () => {
         <svg viewBox="0 0 400 25">
           <text className="uc-medium" x="50%" y="50%" width="100%" height="100%">Videogames and websites take time...</text>
         </svg>
-        <div></div>
+        {/* <div></div> */}
         <svg viewBox="0 0 400 25">
           <text className="uc-small" x="50%" y="50%" width="100%" height="100%">Follow us:</text>
         </svg>        

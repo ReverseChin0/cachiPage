@@ -4,6 +4,7 @@
 :root{
     --uc-bg-size: 256px;
     --svg-text-inner-color: #5d4a8c;
+    --uc-bg-color:#b9a2e4;
 }
 
 .uc-bg{
@@ -14,18 +15,15 @@
     left: 0;
     right: 0;
 
-    background-color: #b9a2e4;    
+    background-color: var(--uc-bg-color);    
     background-image: url('/img/underConstruction/patron1.png');
-    background-size: var(--uc-bg-size);
-    /* background-repeat: no-repeat; */
+    background-size: var(--uc-bg-size);    
 
     animation-name: scrolling-uc-bg;
     animation-duration: 2.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-
-    background-position: 0 0;
+    animation-fill-mode: forwards;    
 
     display: flex;
     flex-direction: column;
@@ -79,14 +77,17 @@ text.uc-small{
 
 .uc-mainImg{
     max-height: 48vh;
+    max-width: 90vw;
 }
 
 .uc-links{
     display: flex;
+    max-width: 60vw;
     gap: 2rem;
 }
 
 .uc-links a{
+    min-width: 32px;
     transition: transform var(--transition-time);
 }
 
@@ -95,14 +96,14 @@ text.uc-small{
 }
 
 .uc-links img{
-    width: 4rem;
+    width: 100%;    
     aspect-ratio: 1;
 }
 
 .uc-footer{
     background: linear-gradient(0deg, rgb(48, 36, 69) 0%, rgba(0, 0, 0, 0) 100%);
     height: 50vh;
-    width: 100%;
+    width: 100vw;
 
     position: fixed;
     bottom: 0;

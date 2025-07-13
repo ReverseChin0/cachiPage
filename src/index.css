@@ -119,6 +119,7 @@ body {
 .splashScreen img{
   opacity: 0;
   height: 60%;
+  max-width: 100%;
 
   animation: show-Up var(--show-logo-duration) ease-in-out var(--intro-animation-delay) forwards;
 }
