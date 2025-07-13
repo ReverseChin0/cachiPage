@@ -1,12 +1,12 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, /*useNavigate*/ } from 'react-router-dom';
 import '../styles/Footer.css'
 
 const Footer = () => {
 
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
   let location = useLocation();
   
-  const toggleLanguage = ( show:boolean, language='EN') => {    
+  const toggleLanguage = ( show:boolean, _language='EN') => {    
 
     const langBtn = document.getElementById("language-btn");
     const langSel = document.getElementById("language-selector");

@@ -12,6 +12,8 @@ import Gallery from "./views/Gallery"
 import Games from "./views/Games"
 import { gamesData } from "./data/infoGame"
 import { galleryEn } from "./data/galleryData"
+import UnderConstruction from "./views/UnderConstruction"
+// import UnderConstruction from "./views/UnderConstruction"
 
 const newsPopupTimerMs = 2500;
 
@@ -19,7 +21,7 @@ const LightWitch = () => {
 
   const [ currentNews, setNewspopup ] = useState(false);
   const [ path, setPath ] = useState("");
-  const [ language, setLanguage ] = useState("EN");
+  // const [ language, setLanguage ] = useState("EN");
 
   let location = useLocation();
 
@@ -53,11 +55,12 @@ const LightWitch = () => {
         <SocialSidebar/>
 
         <Routes>
-          <Route path="/*"            element={<></>}  />          
-          <Route path="/EN/news"      element={<News news={sortedNews}/>}/>
-          <Route path="/EN/games"     element={<Games gamesdata={gamesData}/>}/>
-          <Route path="/EN/about"     element={<About/>}/>
-          <Route path="/EN/gallery"   element={<Gallery data={galleryEn}/>}/>
+          <Route path="/*"            element={<UnderConstruction/>} />
+          <Route path="/EN/news"      element={<News news={sortedNews}/>} /> 
+          <Route path="/EN/games"     element={<Games gamesdata={gamesData}/>} />
+          <Route path="/EN/about"     element={<About/>} />
+          <Route path="/EN/gallery"   element={<Gallery data={galleryEn}/>} />
+          <Route path="/404" element={<UnderConstruction/>} />
         </Routes>
 
         <NewsPopup

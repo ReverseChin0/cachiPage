@@ -6,8 +6,8 @@ import LightWitch from './LightWitch.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
-    {/* <StrictMode> */}
+    <StrictMode>
       <LightWitch/>
-    {/* </StrictMode> */}
+    </StrictMode>
   </BrowserRouter>  
 )

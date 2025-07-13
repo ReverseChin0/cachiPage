@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import type { GalleryItem } from '../data/types';
 
 type galleryScrollviewProps = {

@@ -8,7 +8,7 @@ type modalGalleryProps = {
 
 const Modal = ({data,initial}: modalGalleryProps) => {
 
-   const [index, setIndex] =  useState(initial)
+   const [index] =  useState(initial)
 
   return (
     <div>

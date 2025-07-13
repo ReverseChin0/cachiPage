@@ -40,7 +40,7 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
             {
               galleryImages.map((galleryItem: GalleryItem, imgIndex: number) => {                    
 
-                const { title, subtitle, downloadImage, thumbnail, previewImage, description} = galleryItem;
+                const { thumbnail, previewImage} = galleryItem;
                 // console.log(imgIndex, previewImage, previewImage == null || previewImage == '');
                 
                 let imgElement;
