@@ -94,10 +94,12 @@
     gap: 0.5rem;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
+    justify-items: center;
 }
 
 .gallery-grid img{
-    width: 100%;
+    max-width: 100%;
+    cursor: pointer;
 }
 
 .gal-img-carrousel{
@@ -117,4 +119,21 @@
 
 .gal-sv.hide{
     display: none;
+}
+
+.close-carrousel-div{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 0;
+
+    background-color: rgba(255, 255, 255, 0);
+
+    cursor: pointer;
 }

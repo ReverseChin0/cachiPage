@@ -55,12 +55,12 @@ const LightWitch = () => {
         <SocialSidebar/>
 
         <Routes>
-          <Route path="/*"            element={<UnderConstruction/>} />
+          <Route path="/*"            element={<></>} />
           <Route path="/EN/news"      element={<News news={sortedNews}/>} /> 
           <Route path="/EN/games"     element={<Games gamesdata={gamesData}/>} />
           <Route path="/EN/about"     element={<About/>} />
           <Route path="/EN/gallery"   element={<Gallery data={galleryEn}/>} />
-          <Route path="/404" element={<UnderConstruction/>} />
+          <Route path="/404"          element={<UnderConstruction/>} />
         </Routes>
 
         <NewsPopup

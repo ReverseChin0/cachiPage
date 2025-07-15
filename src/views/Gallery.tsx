@@ -31,8 +31,17 @@ const Gallery = (props: galleryProps) => {
     setLgboxActive(false)
   }
 
+  const closeCarrousel = () => {
+    setShow(true);
+  }
+
   return (
     <>
+    
+      {
+        !show && <div onClick={closeCarrousel} className="close-carrousel-div"/>
+      }
+
       <div className='frame-bg gallery'> 
         <h3>Gallery</h3>
         <GalleryScrollView data={data} onClickedGallImg={clickedGalleryImg} show={show} />

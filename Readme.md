@@ -5,6 +5,8 @@ This template provides a minimal setup to get React working in Vite with HMR and
 hours worked so far 8, 16, 24, 32,
 +5
 +2
++1
+
 
 - todo
 [x] make image center at any resolution
