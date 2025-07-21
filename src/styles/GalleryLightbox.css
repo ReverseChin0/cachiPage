@@ -16,6 +16,9 @@
     z-index: 1;
 
     overflow: hidden;    
+
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
 }
 
 .close-lightbox-div{
@@ -36,17 +39,28 @@
 
 .lightbox-content{
     display: flex;
-    flex-direction: column;
-     z-index: 3;
+    flex-direction: column;    
+    
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+
+    padding: 2rem 0;
+    box-sizing: border-box;
+    position: relative;
+
+    pointer-events: auto; /* ensure it's not blocked */
 }
 
-.lgbox-Image{
-    max-width: 90vw;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
+.lightbox-Image{
+    max-width: 95%;
+    max-height: 100%;
     object-fit: contain;
     display: block;
+    height: 95%;
 }
 
 .lightbox-left,
@@ -86,4 +100,66 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.lightbox-titles{
+    font-family: "Lora";
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.lightbox-titles h3,.lightbox-titles h4{
+    margin: 0;
+    text-align: center;
+    
+}
+
+.lightbox-buttons{
+    max-width: 10vw;
+    display: flex;    
+}
+
+.lightbox-buttons img{
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all var(--transition-time);
+}
+
+.lightbox-buttons button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;    
+}
+
+.lightbox-buttons img:hover{
+    transform: scale(1.2);
+}
+
+.image-container {
+  position: relative; /* crucial */
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 6rem; /* space for arrow buttons */
+  max-height: calc(100vh - 200px); /* adjust based on estimated footer + padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Overlay on top of the image */
+.lightbox-info-overlay{
+    position: absolute;
+    inset: 0; /* full cover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    z-index: 10; /* above image */
+    pointer-events: auto;
 }

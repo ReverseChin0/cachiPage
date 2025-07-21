@@ -28,6 +28,8 @@ const Gallery = (props: galleryProps) => {
   }
 
   const closeLightBox = () => {
+    console.log("DAMN CLOSE THAT SHIT");
+    
     setLgboxActive(false)
   }
 

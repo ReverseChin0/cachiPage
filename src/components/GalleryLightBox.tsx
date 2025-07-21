@@ -21,67 +21,77 @@ const GalleryLightBox = ({items, initialIndex, onClose}: LightBoxProps) => {
   const handlePrev = () => { setIndex( (i) => (i - 1 + items.length) % items.length )}
   const handleNext = () => { setIndex( (i) => (i + 1) % items.length ) }
 
+  const handleLightboxClose = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    const shouldClose = target.classList.contains("image-container");    
+
+    if (shouldClose) onClose();
+  };
+
   return (
     <>        
     <div id="gallery-lightbox">      
-      <div onClick={onClose} className="close-lightbox-div"/>
-      <div onClick={e => e.stopPropagation()} className="lightbox-content">
-        <AnimatePresence mode="wait">
-        <motion.img
-          key={sourceImg}
-          src={sourceImg}
-          alt={current.title}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
-          className="lgbox-Image"/*"max-w-[90vw] max-h-[90vh] object-contain"*/
-        />
-      </AnimatePresence>
+      <div className="lightbox-content" onClick={handleLightboxClose}>        
+        <div className="image-container">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={sourceImg}
+              src={sourceImg}
+              alt={current.title}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="lightbox-Image"
+            />
+          </AnimatePresence>
+        </div>        
 
-      {/* Should be the default img arrows */}
-      <button className="lightbox-left" onClick={handlePrev}/>
-      <button className="lightbox-right" onClick={handleNext}/>
-      {/* Top-right buttons */}
-      <div className="lightbox-photo-footer">
-        <div className="lightbox-titles">
-          <h3>{current.title}</h3>
-          <h4>{current.subtitle}</h4>
-        </div>
-        <div className="lightbox-buttons"/*"absolute top-4 right-4 flex gap-3"*/>        
-          <a href={current.downloadImage} download className="text-white underline">Download</a>
-          <button onClick={() => setShowInfo((prev) => !prev)} className="text-white underline">Info</button>        
-          {/* <button onClick={onClose} className='cross'>
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
-          </button> */}
-        </div>
-      </div>      
+        {/* Should be the default img arrows */}
+        <button className="lightbox-left" onClick={handlePrev}/>
+        <button className="lightbox-right" onClick={handleNext}/>
+        {/* Top-right buttons */}
+        <div className="lightbox-photo-footer">
+          <div className="lightbox-titles">
+            <h3>{current.title}</h3>
+            <h4>{current.subtitle}</h4>
+          </div>
+          <div className="lightbox-buttons"/*"absolute top-4 right-4 flex gap-3"*/>
+            <div>
+              <a href={current.downloadImage} download>
+                <img src="/icons/download_45dp.png" alt="" />
+              </a>
+            </div>
+            <div onClick={() => setShowInfo(true)}>              
+                <img src="/icons/info_45dp.png" alt="" />              
+            </div>            
+          </div>
+        </div>      
 
-      {/* Info Overlay */}
-      <AnimatePresence>
-        {showInfo && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.2 }}
-            className=""
-          >
-            <nav id='mobile'>
-              <button className='cross'>
-                <div className="bar1"></div>
-                <div className="bar2"></div>
-                <div className="bar3"></div>
-              </button>          
-            </nav>       
-            <h2 className="">{current.title}</h2>
-            <h3 className="">{current.subtitle}</h3>
-            <p className="">{current.description}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        {/* Info Overlay */}
+        <AnimatePresence>
+          {showInfo && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.2 }}
+              className="lightbox-info-overlay"
+            >
+              <nav id='mobile' onClick={() => setShowInfo(false)}>
+                <button className='cross'>
+                  <div className="bar1"></div>
+                  <div className="bar2"></div>
+                  <div className="bar3"></div>
+                </button>          
+              </nav>
+
+              <h2 className="">{current.title}</h2>
+              <h3 className="">{current.subtitle}</h3>
+              <p className=""> {current.description}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
     </div>    

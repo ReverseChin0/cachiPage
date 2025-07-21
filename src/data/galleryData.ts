@@ -52,7 +52,7 @@ export const galleryEn = [
         subtitle:'Illustration by VOFAN',
         downloadImage:'/icons/download_45dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png',
         previewImage:'',
-        thumbnail:'/testing/3.jpg',        
+        thumbnail:'/testing/3.png',        
         description:`Fun Fact: This illustration was actually finished back in April 2024. 
         It's been sitting around for a year waiting to be shown to the public. 
         We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
