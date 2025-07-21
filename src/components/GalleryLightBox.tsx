@@ -43,15 +43,21 @@ const GalleryLightBox = ({items, initialIndex, onClose}: LightBoxProps) => {
       <button className="lightbox-left" onClick={handlePrev}/>
       <button className="lightbox-right" onClick={handleNext}/>
       {/* Top-right buttons */}
-      <div className="lightbox-buttons"/*"absolute top-4 right-4 flex gap-3"*/>
-        <a href={current.downloadImage} download className="text-white underline">Download</a>
-        <button onClick={() => setShowInfo((prev) => !prev)} className="text-white underline">Info</button>        
-        {/* <button onClick={onClose} className='cross'>
-          <div className="bar1"></div>
-          <div className="bar2"></div>
-          <div className="bar3"></div>
-        </button> */}
-      </div>
+      <div className="lightbox-photo-footer">
+        <div className="lightbox-titles">
+          <h3>{current.title}</h3>
+          <h4>{current.subtitle}</h4>
+        </div>
+        <div className="lightbox-buttons"/*"absolute top-4 right-4 flex gap-3"*/>        
+          <a href={current.downloadImage} download className="text-white underline">Download</a>
+          <button onClick={() => setShowInfo((prev) => !prev)} className="text-white underline">Info</button>        
+          {/* <button onClick={onClose} className='cross'>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </button> */}
+        </div>
+      </div>      
 
       {/* Info Overlay */}
       <AnimatePresence>

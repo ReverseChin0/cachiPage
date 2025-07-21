@@ -35,6 +35,8 @@
 }
 
 .lightbox-content{
+    display: flex;
+    flex-direction: column;
      z-index: 3;
 }
 
@@ -78,4 +80,10 @@
 
 .lightbox-right{
     right: 1rem;
+}
+
+.lightbox-photo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
