@@ -48,7 +48,7 @@
     width: 100%;
     z-index: 3;
 
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
     box-sizing: border-box;
     position: relative;
 
@@ -100,12 +100,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-around;
+    max-width: calc(100% - 6rem);    
+    width: 100%;
 }
 
 .lightbox-titles{
     font-family: "Lora";
     font-size: 1.5rem;
     color: var(--secondary-color);
+    letter-spacing: 2.5px;
 }
 
 .lightbox-titles h3,.lightbox-titles h4{
@@ -149,17 +153,43 @@
 
 /* Overlay on top of the image */
 .lightbox-info-overlay{
+
+    display: flex;
     position: absolute;
     inset: 0; /* full cover */
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     background-color: rgba(0, 0, 0, 0.65);
     color: white;
-    padding: 2rem;
+    margin: 0 auto;
+    padding: 15vh 10vw 0 10vw;
     text-align: center;
-    z-index: 10; /* above image */
-    pointer-events: auto;
+    z-index: 3; /* above image */    
+
+    font-family: "Lora";
+    
+    max-width: var(--FullHD);
+}
+
+.lightbox-info-overlay p{
+    text-align: justify;
+}
+
+.lightbox-info-title, .lightbox-info-subtitle{
+    color: var(--secondary-color-link);
+    margin: 0.5rem;
+}
+
+.lightbox-info-title{
+    font-size: 2.3rem;
+}
+
+.lightbox-info-subtitle{
+    font-size: 1.5rem;
+}
+
+.lightbox-info-overlay .cross{
+    align-self: end;
 }

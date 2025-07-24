@@ -2,6 +2,7 @@ import { useState } from "react"
 import type { GalleryItem } from "../data/types"
 import { AnimatePresence, motion } from "framer-motion"
 import "../styles/GalleryLightbox.css"
+import React from "react"
 
 type LightBoxProps = {
     items: GalleryItem[]
@@ -52,6 +53,7 @@ const GalleryLightBox = ({items, initialIndex, onClose}: LightBoxProps) => {
         <button className="lightbox-right" onClick={handleNext}/>
         {/* Top-right buttons */}
         <div className="lightbox-photo-footer">
+          <div></div>
           <div className="lightbox-titles">
             <h3>{current.title}</h3>
             <h4>{current.subtitle}</h4>
@@ -78,17 +80,22 @@ const GalleryLightBox = ({items, initialIndex, onClose}: LightBoxProps) => {
               transition={{ duration: 0.2 }}
               className="lightbox-info-overlay"
             >
-              <nav id='mobile' onClick={() => setShowInfo(false)}>
-                <button className='cross'>
-                  <div className="bar1"></div>
-                  <div className="bar2"></div>
-                  <div className="bar3"></div>
-                </button>          
-              </nav>
+              
+              <button className='cross' onClick={() => setShowInfo(false)}>
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+              </button>
 
-              <h2 className="">{current.title}</h2>
-              <h3 className="">{current.subtitle}</h3>
-              <p className=""> {current.description}</p>
+              <h2 className="lightbox-info-title">{current.title}</h2>
+              <h3 className="lightbox-info-subtitle">{current.subtitle}</h3>
+              <p> { current.description.split('\n').map((line, index) => (
+                <React.Fragment key={index}> 
+                  { line.trim() } 
+                  <br/> 
+                </React.Fragment>
+              ))}
+              </p>
             </motion.div>
           )}
         </AnimatePresence>

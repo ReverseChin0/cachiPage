@@ -5,14 +5,14 @@ export const galleryEn = [
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'/img/gallery/studio_20240302_EX_opt.png',
         thumbnail:'/img/gallery/studio_thumbnail.png',        
-        description:`Fun Fact: This illustration was actually finished back in April 2024. 
-        It's been sitting around for a year waiting to be shown to the public. 
-        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
-        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.
-        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?
+        description:`Fun Fact: This illustration was actually finished back in April 2024.\n
+        It's been sitting around for a year waiting to be shown to the public.\n
+        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!\n
+        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.v
+        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?\n
         VOFAN is the main illustrator for the MONOGATARI SERIES as well as other NISIOISIN works. (If you haven't read them, we recommend you do!)
-        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.
-        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.
+        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.\n
+        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.\n
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
@@ -21,14 +21,14 @@ export const galleryEn = [
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
         thumbnail:'/testing/1.png',
-        description:`Fun Fact: This illustration was actually finished back in April 2024. 
-        It's been sitting around for a year waiting to be shown to the public. 
-        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
-        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.
-        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?
+        description:`Fun Fact: This illustration was actually finished back in April 2024.\n
+        It's been sitting around for a year waiting to be shown to the public.\n
+        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!\n
+        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.v
+        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?\n
         VOFAN is the main illustrator for the MONOGATARI SERIES as well as other NISIOISIN works. (If you haven't read them, we recommend you do!)
-        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.
-        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.
+        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.\n
+        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.\n
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
@@ -37,14 +37,14 @@ export const galleryEn = [
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
         thumbnail:'/testing/2.png',        
-        description:`Fun Fact: This illustration was actually finished back in April 2024. 
-        It's been sitting around for a year waiting to be shown to the public. 
-        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
-        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.
-        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?
+        description:`Fun Fact: This illustration was actually finished back in April 2024.\n
+        It's been sitting around for a year waiting to be shown to the public.\n
+        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!\n
+        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.v
+        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?\n
         VOFAN is the main illustrator for the MONOGATARI SERIES as well as other NISIOISIN works. (If you haven't read them, we recommend you do!)
-        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.
-        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.
+        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.\n
+        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.\n
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
@@ -53,14 +53,14 @@ export const galleryEn = [
         downloadImage:'/icons/download_45dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png',
         previewImage:'',
         thumbnail:'/testing/3.png',        
-        description:`Fun Fact: This illustration was actually finished back in April 2024. 
-        It's been sitting around for a year waiting to be shown to the public. 
-        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
-        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.
-        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?
+        description:`Fun Fact: This illustration was actually finished back in April 2024.\n
+        It's been sitting around for a year waiting to be shown to the public.\n
+        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!\n
+        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.v
+        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?\n
         VOFAN is the main illustrator for the MONOGATARI SERIES as well as other NISIOISIN works. (If you haven't read them, we recommend you do!)
-        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.
-        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.
+        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.\n
+        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.\n
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
@@ -69,14 +69,14 @@ export const galleryEn = [
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
         thumbnail:'/testing/4.ico',        
-        description:`Fun Fact: This illustration was actually finished back in April 2024. 
-        It's been sitting around for a year waiting to be shown to the public. 
-        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
-        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.
-        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?
+        description:`Fun Fact: This illustration was actually finished back in April 2024.\n
+        It's been sitting around for a year waiting to be shown to the public.\n
+        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!\n
+        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.v
+        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?\n
         VOFAN is the main illustrator for the MONOGATARI SERIES as well as other NISIOISIN works. (If you haven't read them, we recommend you do!)
-        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.
-        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.
+        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.\n
+        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.\n
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     },
     {
@@ -85,14 +85,14 @@ export const galleryEn = [
         downloadImage:'/img/gallery/studio_20240302_EX.png',
         previewImage:'',
         thumbnail:'/img/logos/LW logo color opt.png',        
-        description:`Fun Fact: This illustration was actually finished back in April 2024. 
-        It's been sitting around for a year waiting to be shown to the public. 
-        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!
-        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.
-        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?
+        description:`Fun Fact: This illustration was actually finished back in April 2024.\n
+        It's been sitting around for a year waiting to be shown to the public.\n
+        We are finally ready to reveal our studio to the world. We are so sorry it has taken us this long!\n
+        It depicts Clara in her workshop, surrounded by a few of the uncountable things that have inspired our work and vision as a game studio.v
+        Having magic and light as our two main motifs... Who better to design our little witch of light than the Magician of Light himself?\n
         VOFAN is the main illustrator for the MONOGATARI SERIES as well as other NISIOISIN works. (If you haven't read them, we recommend you do!)
-        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.
-        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.
+        He was also the main character designer for the PS3 title TIME AND ETERNITY by Imageepoch.\n
+        Please, make sure to give his artbook COLORFUL DREAMS a look as well! It's filled with a lot more of his beautiful illustrations.\n
         Collaborating with him has been a dream come true and we are immensely grateful for his incredible work and are happy to finally share it with everyone.`
     }
 ]

@@ -18,6 +18,9 @@
   --news-popup-background: url('/img/helper/NewsfeedBox.png');
   --main-frame-background: url('/img/helper/SmallerFrame.png');
   --slides-arrow-background: url('/icons/system_arrow.png');
+
+  --2k-res: 2560px;
+  --FullHD: 1980px;
 }
 
 @font-face{
@@ -187,10 +190,20 @@ body {
   cursor: pointer;
 }
 
+.cross{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: transform var(--transition-time);
+}
+
+.cross:hover{
+    transform: scale(1.2);
+}
+
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: var(--primary-color);
   margin: 6px 0;
   transition: 200ms;
 }
