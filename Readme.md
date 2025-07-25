@@ -9,6 +9,7 @@ hours worked so far 8, 16, 24, 32, 40
 +3
 +1
 +1
++1.5
 
 
 - todo

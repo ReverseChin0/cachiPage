@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Navigate, Route, Routes, useLocation } from "react-router-dom"
 import SocialSidebar from "./components/SocialSidebar"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
@@ -13,22 +13,19 @@ import Games from "./views/Games"
 import { gamesData } from "./data/infoGame"
 import { galleryEn } from "./data/galleryData"
 import UnderConstruction from "./views/UnderConstruction"
-// import UnderConstruction from "./views/UnderConstruction"
 
 const newsPopupTimerMs = 2500;
 
 const LightWitch = () => {
 
-  const [ currentNews, setNewspopup ] = useState(false);
-  const [ path, setPath ] = useState("");
-  // const [ language, setLanguage ] = useState("EN");
+  const [ currentNews, setNewspopup ] = useState(false);    
 
   let location = useLocation();
 
   useEffect(() => {
     
     const timeoutNewsPopup = setTimeout(() => {
-      setNewspopup(true);            
+      setNewspopup(true);
     }, newsPopupTimerMs)
 
     if(location.pathname !== "/"){      
@@ -50,18 +47,19 @@ const LightWitch = () => {
 
         <div id="background-image-div"/>
 
-        <Navbar setPath={setPath} previous={path} location={location.pathname}/>
+        <Navbar/>
 
         <SocialSidebar/>
 
         <Routes>
-          <Route path="/*"            element={<></>} />
-          <Route path="/EN/news"      element={<News news={sortedNews}/>} /> 
-          <Route path="/EN/games"     element={<Games gamesdata={gamesData}/>} />
-          <Route path="/EN/about"     element={<About/>} />
-          <Route path="/EN/gallery"   element={<Gallery data={galleryEn}/>} />
+          <Route path="/*"               element={<Navigate to="/EN" replace />} />
+          <Route path="/:lang/*"         element={<></>} />
+          <Route path="/:lang/news"      element={<News news={sortedNews}/>} /> 
+          <Route path="/:lang/games"     element={<Games gamesdata={gamesData}/>} />
+          <Route path="/:lang/about"     element={<About/>} />
+          <Route path="/:lang/gallery"   element={<Gallery data={galleryEn}/>} />
           <Route path="/404"          element={<UnderConstruction/>} />
-        </Routes>
+        </Routes>        
 
         <NewsPopup
           news={[
@@ -71,8 +69,7 @@ const LightWitch = () => {
               message: "This is a test",
             },
           ]}
-          delayPassed={currentNews}
-          isOnMainPage={path === '/' || path === ''}
+          delayPassed={currentNews}          
         />
         <Footer/>
     </>

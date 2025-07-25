@@ -1,8 +1,10 @@
 import type { NewsPopupProps } from '../data/types';
 import '../styles/NewsPopup.css'
+import { IsOnMain } from '../utility/utility';
 
+const NewsPopup = ( { news, delayPassed }: NewsPopupProps ) => {  
 
-const NewsPopup = ( { news, delayPassed, isOnMainPage }: NewsPopupProps ) => {
+  const isOnMainPage = IsOnMain();
 
   const { title, date } = news[0];    
 

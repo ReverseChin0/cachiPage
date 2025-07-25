@@ -1,12 +1,27 @@
-import { useLocation, /*useNavigate*/ } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/Footer.css'
 
 const Footer = () => {
-
-  //let navigate = useNavigate();
-  let location = useLocation();
   
-  const toggleLanguage = ( show:boolean, _language='EN') => {    
+  let location = useLocation();  
+  const navigate = useNavigate();
+
+  const changeLanguage = (newLang: string) => {
+
+    toggleLanguage(false);//if we change language we should hide the buttons
+
+    // if route where /EN/gallery, it would return ["EN","gallery"]
+    const segments = location.pathname.split("/").filter(Boolean); //filter removes empty strings
+    
+    if (segments.length > 0 && ["EN", "JP", "ES", "FR"].includes(segments[0])) {
+      segments[0] = newLang;
+    } else {
+      segments.unshift(newLang);
+    }
+    navigate(`/${segments.join("/")}`);
+  };
+  
+  const toggleLanguage = ( show:boolean) => {    
 
     const langBtn = document.getElementById("language-btn");
     const langSel = document.getElementById("language-selector");
@@ -19,10 +34,6 @@ const Footer = () => {
     }else{
       langBtn?.classList.add("show-selector");
       langSel?.classList.remove("show-selector");
-
-      if(location.pathname){
-        //todo cambiar path con idioma correcto o poner idioma si no hay ningun path
-      }
     }
   }
 
@@ -40,10 +51,10 @@ const Footer = () => {
         </div>
 
         <div id='language-selector'>
-          <p onClick={() => { toggleLanguage(false) } }>EN</p>
-          <p onClick={() => { toggleLanguage(false) } }>JP</p>
-          <p onClick={() => { toggleLanguage(false) } }>ES</p>
-          <p onClick={() => { toggleLanguage(false) } }>FR</p>
+          <p onClick={() => { changeLanguage("EN") } }>EN</p>
+          <p onClick={() => { changeLanguage("JP") } }>JP</p>
+          <p onClick={() => { changeLanguage("ES") } }>ES</p>
+          <p onClick={() => { changeLanguage("FR") } }>FR</p>
         </div>
 
         <p>Illustration by VOFAN</p>

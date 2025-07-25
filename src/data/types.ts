@@ -6,8 +6,7 @@ export type NewsItem = {
 
 export type NewsPopupProps = {
   news: NewsItem[];
-  delayPassed: boolean;
-  isOnMainPage?: boolean;
+  delayPassed: boolean;  
 };
 
 export type GameProps = {

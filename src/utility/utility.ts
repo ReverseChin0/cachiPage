@@ -1,6 +1,7 @@
+import { useLocation } from "react-router-dom";
 import type { NewsItem } from "../data/types";
 
-export const sortedNews = (news:NewsItem[]) => {
+export function sortedNews(news:NewsItem[]){
 
     return [...news].sort((a, b) => {
 
@@ -11,4 +12,23 @@ export const sortedNews = (news:NewsItem[]) => {
 
         return parseDate(b.date).getTime() - parseDate(a.date).getTime(); // Descending order
     })    
-} ;
+};
+
+export function getCurrentLanguage() {
+    const location = useLocation();
+    const segments = location.pathname.split("/").filter(Boolean);
+    const lang = segments[0]?.toUpperCase();
+
+    const validLangs = ["EN", "JP", "ES", "FR"];
+    const currentLang = validLangs.includes(lang) ? lang : "EN";
+    return currentLang;
+}
+
+export function IsOnMain(){
+    const location = useLocation();
+
+    const segments = location.pathname.split("/").filter(Boolean);
+    const lastSegment = segments[segments.length-1];
+
+    return ["EN", "JP", "ES", "FR"].includes(lastSegment); //this determines if its on main
+}
