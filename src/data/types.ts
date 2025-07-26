@@ -23,3 +23,19 @@ export type GalleryItem = {
   thumbnail:string,
   description:string
 }
+
+export type GalleryTranslation = {
+  title: string;
+  subtitle: string;
+  description: string;
+};
+
+export type MultiLangGalleryItem = {
+  id: string;
+  downloadImage: string;
+  previewImage: string;
+  thumbnail: string;
+  translations: {
+    [langCode: string]: GalleryTranslation;
+  };
+};

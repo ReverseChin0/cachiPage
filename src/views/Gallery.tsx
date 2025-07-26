@@ -1,17 +1,15 @@
-import { useState } from 'react';
 import GalleryCarrousel from '../components/GalleryCarrousel';
 import GalleryScrollView from '../components/GalleryScrollView';
-import type { GalleryItem } from '../data/types';
-import '../styles/Frames.css';
 import GalleryLightBox from '../components/GalleryLightBox';
+import { getCurrentLanguage, GetGalleryFromLanguage } from '../utility/utility';
+import { galleryDataText } from '../data/galleryData';
+import { useState } from 'react';
+import '../styles/Frames.css';
 
-type galleryProps = {
-  data: GalleryItem[];
-}
+const Gallery = () => {
 
-const Gallery = (props: galleryProps) => {
-
-  const { data } = props;
+  const language = getCurrentLanguage();
+  const data = GetGalleryFromLanguage(galleryDataText, language);
   const [ show, setShow ] = useState(true);
   const [ lgboxActive, setLgboxActive ] = useState(false);
   const [ indexInitial, setInitial ] = useState<number|null>(null);

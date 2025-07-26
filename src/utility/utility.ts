@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import type { NewsItem } from "../data/types";
+import type { MultiLangGalleryItem, NewsItem } from "../data/types";
 
 export function sortedNews(news:NewsItem[]){
 
@@ -31,4 +31,20 @@ export function IsOnMain(){
     const lastSegment = segments[segments.length-1];
 
     return ["EN", "JP", "ES", "FR"].includes(lastSegment); //this determines if its on main
+}
+
+export function GetGalleryFromLanguage(originalGallery:MultiLangGalleryItem[], language:string){
+
+     return originalGallery.map(item => {
+        const translation = item.translations[language];
+
+        return {
+        title: translation?.title ?? "",
+        subtitle: translation?.subtitle ?? "",
+        description: translation?.description ?? "",
+        downloadImage: item.downloadImage,
+        previewImage: item.previewImage,
+        thumbnail: item.thumbnail,
+        };
+    });
 }
