@@ -6,12 +6,11 @@ import { useEffect, useState } from "react"
 import About from "./views/About"
 import NewsPopup from "./components/NewsPopup"
 import News from "./views/News"
-import { englishNews } from "./data/newsData"
 import { sortedNews as sortNews } from "./utility/utility"
 import Gallery from "./views/Gallery"
 import Games from "./views/Games"
-import { gamesData } from "./data/infoGame"
 import UnderConstruction from "./views/UnderConstruction"
+import { newsDataLocalized } from "./data/newsData"
 
 const newsPopupTimerMs = 2500;
 
@@ -36,7 +35,7 @@ const LightWitch = () => {
     }
   }, [])  
   
-  const sortedNews = sortNews(englishNews);
+  const sortedNews = sortNews(newsDataLocalized);
 
   return (
     <>
@@ -54,20 +53,14 @@ const LightWitch = () => {
           <Route path="/*"               element={<Navigate to="/EN" replace />} />
           <Route path="/:lang/*"         element={<></>} />
           <Route path="/:lang/news"      element={<News news={sortedNews}/>} /> 
-          <Route path="/:lang/games"     element={<Games gamesdata={gamesData}/>} />
+          <Route path="/:lang/games"     element={<Games/>} />
           <Route path="/:lang/about"     element={<About/>} />
           <Route path="/:lang/gallery"   element={<Gallery/>} />
           <Route path="/404"          element={<UnderConstruction/>} />
         </Routes>        
 
         <NewsPopup
-          news={[
-            {
-              date: "11/02/2018",
-              title: "Webpage Launch!",
-              message: "This is a test",
-            },
-          ]}
+          news={sortedNews[0]}
           delayPassed={currentNews}          
         />
         <Footer/>

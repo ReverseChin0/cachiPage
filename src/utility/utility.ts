@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
-import type { MultiLangGalleryItem, NewsItem } from "../data/types";
+import type { MultiLangGalleryItem, NewsItem, NewsPropsLocalized } from "../data/types";
 
-export function sortedNews(news:NewsItem[]){
+export function sortedNews(news:NewsPropsLocalized[]){
 
     return [...news].sort((a, b) => {
 

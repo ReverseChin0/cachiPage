@@ -5,13 +5,25 @@ export type NewsItem = {
 };
 
 export type NewsPopupProps = {
-  news: NewsItem[];
+  news: NewsPropsLocalized;
   delayPassed: boolean;  
 };
 
-export type GameProps = {
-  id:number,  
-  title:string,
+export type NewsPropsLocalized = {
+  date:string,
+  translation:{
+    [language:string]:{
+        title:string,
+        message:string
+    },
+  }    
+}
+
+export type GamePropsLocalized = {
+  id:number,
+  title:{
+    [language:string]:string,
+  }  
   images:string[],  
 }
 

@@ -1,10 +1,13 @@
-import type { NewsItem } from "../data/types"
+import type { NewsPropsLocalized } from "../data/types"
+import { useCurrentLanguage } from "../hooks/UseCurrentLanguage"
 
 type newsProps = {
-    news: NewsItem[]
+    news: NewsPropsLocalized[]
 }
 
 const News = ( {news} : newsProps ) => {
+
+    const language = useCurrentLanguage();
 
     return (
       <div className='frame-bg'>
@@ -13,7 +16,8 @@ const News = ( {news} : newsProps ) => {
                 <h1>News</h1>
                 { 
                     news.map((article,index)=>{
-                        const { title,message,date } = article;
+                        const { date, translation } = article; //LIKE THIS BUT I DONT KNOW HOW
+                        const {title, message} = translation[language];
                         return <div className="new-item" key={`article_${index}`}>
                             <h3>{title}</h3> <h5>{date}</h5>
                             <p>{message}</p>

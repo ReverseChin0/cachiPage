@@ -1,16 +1,15 @@
-import '../styles/Slides.css'
 import { useEffect, useState } from "react";
-import type { GameProps } from "../data/types";
+import { useCurrentLanguage } from '../hooks/UseCurrentLanguage';
+import { gamesData } from '../data/infoGame';
+import '../styles/Slides.css'
+import type { GamePropsLocalized } from "../data/types";
 
-type gameViewProps = {
-  gamesdata:GameProps[]
-}
 
-const Games = (props: gameViewProps) => {
+const Games = () => {
 
-  const {gamesdata} = props;
+  const language = useCurrentLanguage(); 
 
-  const [games] = useState(gamesdata);
+  const [games] = useState(gamesData);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -29,7 +28,7 @@ const Games = (props: gameViewProps) => {
       <div>
           <div className="section-center">
             {
-              games.map((game: GameProps, gameIndex: number) => {
+              games.map((game: GamePropsLocalized, gameIndex: number) => {
                 const { id, title, images } = game;
 
                 let position = 'nextSlide';
@@ -52,7 +51,7 @@ const Games = (props: gameViewProps) => {
                         images.map((image,index) => <img className='game-img' key={`${id}_image_${index}`} src={image}/>)
                       }
                     </div>
-                    <h4>{title}</h4>                    
+                    <h4>{title[language]}</h4>                    
                   </article>
                 );
               })
@@ -63,7 +62,7 @@ const Games = (props: gameViewProps) => {
             <button className="next" onClick={() => setIndex(index + 1)}/>                          
 
             <div className="dots">
-              {games.map((_:GameProps, dotIndex:number) => (
+              {games.map((_:GamePropsLocalized, dotIndex:number) => (
                 <span
                   key={dotIndex}
                   className={`dot ${index === dotIndex ? 'active-dot' : ''}`}
