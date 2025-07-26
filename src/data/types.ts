@@ -39,3 +39,7 @@ export type MultiLangGalleryItem = {
     [langCode: string]: GalleryTranslation;
   };
 };
+
+export type AboutData = {
+  [langCode:string]: string[];
+}

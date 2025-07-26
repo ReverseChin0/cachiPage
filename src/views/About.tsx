@@ -1,10 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { aboutdata } from '../data/infoAbout'
 import '../styles/Frames.css'
+import { useCurrentLanguage } from '../hooks/UseCurrentLanguage';
 
 const About = () => {  
+  
+  const language = useCurrentLanguage();
 
-  const [messages] = useState(aboutdata.messages);
+  // Get the messages based on current language
+  const messages = useMemo(() => aboutdata[language], [language]);
+
   const [index, setIndex] = useState(0);  
   
 
@@ -17,8 +22,7 @@ const About = () => {
       setIndex(0);
     }          
 
-    console.log(messages);
-    
+    //console.log(messages);    
 
   }, [index, messages]);  
 
