@@ -13,7 +13,12 @@ const News = ( {news} : newsProps ) => {
       <div className='frame-bg'>
         <div className="news">
             <div className="news-scroll">
-                <h1>News</h1>
+                <h1>{
+                    language == "ES"? "Noticias" : 
+                    language == "FR" ? "Actualités":
+                    language == "JP" ? "ニュース": "News"}
+                </h1>
+                
                 { 
                     news.map((article,index)=>{
                         const { date, translation } = article; //LIKE THIS BUT I DONT KNOW HOW

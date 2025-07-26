@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { getCurrentLanguage } from '../utility/utility'
 import '../styles/Navbar.css'
+import { navTitles } from '../data/navData'
 
 const Navbar = () => {
 
@@ -64,11 +65,11 @@ const Navbar = () => {
             <img onClick={ () => GoToRoute("/")} src="/img/logos/LogoJustText.png" alt="no-logo" />
           </div>
 
-          <li><span onClick={ () => GoToRoute("news")}    >NEWS</span></li>
-          <li><span onClick={ () => GoToRoute("games")}   >GAMES</span></li>
-          <li><span onClick={ () => GoToRoute("about")}   >ABOUT US</span></li>
-          <li><span onClick={ () => GoToRoute("gallery")} >GALLERY</span></li>        
-          <li><a href="#" target='_blank'><span>STORE</span></a></li>
+          <li><span onClick={ () => GoToRoute("news")}    >{navTitles[lang].news}</span></li>
+          <li><span onClick={ () => GoToRoute("games")}   >{navTitles[lang].games}</span></li>
+          <li><span onClick={ () => GoToRoute("about")}   >{navTitles[lang].about}</span></li>
+          <li><span onClick={ () => GoToRoute("gallery")} >{navTitles[lang].gallery}</span></li>        
+          <li><a href="#" target='_blank'><span>{navTitles[lang].store}</span></a></li>
         </div>
 
       </div>      
@@ -77,3 +78,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
