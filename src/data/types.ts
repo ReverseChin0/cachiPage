@@ -36,7 +36,7 @@ export type GalleryItem = {
   description:string
 }
 
-export type GalleryTranslation = {
+export type GalleryLocalization = {
   title: string;
   subtitle: string;
   description: string;
@@ -48,10 +48,10 @@ export type MultiLangGalleryItem = {
   previewImage: string;
   thumbnail: string;
   translations: {
-    [langCode: string]: GalleryTranslation;
+    [langCode: string]: GalleryLocalization;
   };
 };
 
-export type AboutData = {
+export type AboutDataLocalized = {
   [langCode:string]: string[];
 }

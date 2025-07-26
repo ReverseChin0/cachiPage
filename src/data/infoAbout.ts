@@ -1,6 +1,6 @@
-import type { AboutData } from "./types";
+import type { AboutDataLocalized } from "./types";
 
-export const aboutdata:AboutData =
+export const aboutdata:AboutDataLocalized =
 {
     EN: [
         `<h2>Light your heart up!</h2>
