@@ -55,8 +55,8 @@
 #interactable-navbar{
     background: linear-gradient(180deg,var(--background-color) 0%, rgba(0, 0, 0, 0) 100%);
 
-    padding-right: 18vw;
-    padding-left: 4vw;  
+    display: flex;
+    justify-content: center;
     height: 100%;
     
     transform: translateY(-50%);
@@ -72,6 +72,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    width: 90vw;
+    max-width: 1980px;
 }
 
 #interactable-navbar.show-navbar{
