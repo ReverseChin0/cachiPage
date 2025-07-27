@@ -12,22 +12,26 @@ const Navbar = () => {
   const newUrl = useRef("")
   let navigate = useNavigate();
 
-  const backgroundDiv = document.getElementById("background-image-div");
+  
 
-  useEffect(() => {
-    const onlyPath = loc.pathname.split("/").pop();
-    if(loc.pathname !== "/" && onlyPath != null ){
-      //URLTest(onlyPath);
-      GoToRoute(onlyPath);
+  useEffect(() => {    
+    const lastSegment = loc.pathname.split("/").pop();
+    const sections = ["news","games","about","gallery"]
+    
+    if(sections.includes(lastSegment?lastSegment:"")){ //if we are in a specific sectino
       document.getElementById("interactable-navbar")?.classList.add("show-navbar");
-    }
-  }, [])    
+      const backgroundDiv = document.getElementById("background-image-div");      
+      backgroundDiv?.classList.add("blur"); 
+    }    
+
+  }, [])
 
   function GoToRoute(Route:string){
     const newRoute = `/${lang}/${Route}`;
     //console.log("GoToRoute", "previous",loc.pathname," == ", `/${lang}/${Route}` == loc.pathname );
 
     console.log("==?", newRoute == loc.pathname);
+    const backgroundDiv = document.getElementById("background-image-div");
     
     if(newRoute == loc.pathname){
       backgroundDiv?.classList.remove("blur");
@@ -62,7 +66,7 @@ const Navbar = () => {
       <div id='interactable-navbar'>
         <div>
           <div className="nav-img">
-            <img onClick={ () => GoToRoute("/")} src="/img/logos/LogoJustText.png" alt="no-logo" />
+            <img onClick={ () => navigate(`/${lang}`)} src="/img/logos/LogoJustText.png" alt="no-logo" />
           </div>
 
           <li><span onClick={ () => GoToRoute("news")}    >{navTitles[lang].news}</span></li>

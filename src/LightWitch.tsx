@@ -51,12 +51,12 @@ const LightWitch = () => {
 
         <Routes>
           <Route path="/*"               element={<Navigate to="/EN" replace />} />
-          <Route path="/:lang/*"         element={<></>} />
           <Route path="/:lang/news"      element={<News news={sortedNews}/>} /> 
           <Route path="/:lang/games"     element={<Games/>} />
           <Route path="/:lang/about"     element={<About/>} />
           <Route path="/:lang/gallery"   element={<Gallery/>} />
-          <Route path="/404"          element={<UnderConstruction/>} />
+          <Route path="/404"             element={<UnderConstruction/>} />
+          <Route path="/:lang/*"         element={<></>} />
         </Routes>        
 
         <NewsPopup

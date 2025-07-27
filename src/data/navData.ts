@@ -20,7 +20,7 @@ export const navTitles:localizedNavTitles =
   ES:{
     news: "NOTICIAS",
     games: "JUEGOS",
-    about: "SOBRE NOSOTROS",
+    about: "ACERCA DE",
     gallery: "GALERÍA",
     store: "TIENDA"
   },
