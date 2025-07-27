@@ -9,16 +9,14 @@ const Navbar = () => {
   const lang = getCurrentLanguage(); //EN ES FR JP
   const loc = useLocation();
   
-  const newUrl = useRef("")
-  let navigate = useNavigate();
-
-  
-
-  useEffect(() => {    
-    const lastSegment = loc.pathname.split("/").pop();
-    const sections = ["news","games","about","gallery"]
     
-    if(sections.includes(lastSegment?lastSegment:"")){ //if we are in a specific sectino
+  let navigate = useNavigate();
+  
+  useEffect(() => {               
+    const sections = ["news","games","about","gallery"]
+    const lastSegment = loc.pathname.split("/").pop();
+    
+    if(sections.includes(lastSegment?lastSegment:"")) { //if we are in a section
       document.getElementById("interactable-navbar")?.classList.add("show-navbar");
       const backgroundDiv = document.getElementById("background-image-div");      
       backgroundDiv?.classList.add("blur"); 
@@ -45,17 +43,18 @@ const Navbar = () => {
 
   function showNavbar(show:boolean) {
 
-    // console.log(newUrl.current,"🦕");
-    if(newUrl.current !== '/' && newUrl.current !== ''){
+    const sections = ["news","games","about","gallery"]
+    const lastSegment = loc.pathname.split("/").pop();
+    const interNavbar = document.getElementById("interactable-navbar");        
+        
+    if(!sections.includes(lastSegment?lastSegment:"") && !show){ //if we are in home and want to hide
+      interNavbar?.classList.remove("show-navbar");
       return;
     }    
 
-    let interNavbar = document.getElementById("interactable-navbar");
     if(show){
       interNavbar?.classList.add("show-navbar");
-    }else{
-      interNavbar?.classList.remove("show-navbar");
-    }    
+    }
   }
 
   return (
