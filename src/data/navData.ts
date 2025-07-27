@@ -39,3 +39,31 @@ export const navTitles:localizedNavTitles =
     store: "ストア"
   }
 }
+
+export type localizedFooterTerms = {
+    [language:string]:{
+        languageText:       string,
+        illustrationBy:     string,
+    }
+}
+
+
+export const FooterTerms: localizedFooterTerms = {
+  EN:{
+    languageText: "LANGUAGE",
+    illustrationBy: "Illustration by VOFAN"
+  },
+  ES:{
+    languageText:"IDIOMA",
+    illustrationBy: "Ilustración de VOFAN"
+  },
+  FR:{
+    languageText: "Langue",
+    illustrationBy:"Illustration par VOFAN"
+
+  },
+  JP:{
+    languageText: "言語",
+    illustrationBy: "イラスト：VOFAN"
+  }
+}
