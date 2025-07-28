@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { getCurrentLanguage } from '../utility/utility'
 import '../styles/Navbar.css'
@@ -8,9 +8,10 @@ const Navbar = () => {
 
   const lang = getCurrentLanguage(); //EN ES FR JP
   const loc = useLocation();
-  
-    
+      
   let navigate = useNavigate();
+
+  const [mobileShow,setMobileShow] = useState(false);
   
   useEffect(() => {               
     const sections = ["news","games","about","gallery"]
@@ -57,26 +58,43 @@ const Navbar = () => {
     }
   }
 
+
   return (
-    <div className="navbar"
+    <>
+      <div className="navbar"
         onMouseEnter={ () => { showNavbar(true);} }
-        onMouseLeave={ () => { showNavbar(false); } }
-    >
-      <div id='interactable-navbar'>
-        <div>
-          <div className="nav-img">
-            <img onClick={ () => navigate(`/${lang}`)} src="/img/logos/LogoJustText.png" alt="no-logo" />
+        onMouseLeave={ () => { showNavbar(false); } }>
+        <div id='interactable-navbar'>
+          <div>
+            <div className="nav-img">
+              <img onClick={ () => navigate(`/${lang}`)} src="/img/logos/LogoJustText.png" alt="no-logo" />
+            </div>
+
+            <li><span onClick={ () => GoToRoute("news")}    >{navTitles[lang].news}</span></li>
+            <li><span onClick={ () => GoToRoute("games")}   >{navTitles[lang].games}</span></li>
+            <li><span onClick={ () => GoToRoute("about")}   >{navTitles[lang].about}</span></li>
+            <li><span onClick={ () => GoToRoute("gallery")} >{navTitles[lang].gallery}</span></li>        
+            <li><a href="#" target='_blank'><span>{navTitles[lang].store}</span></a></li>
           </div>
 
-          <li><span onClick={ () => GoToRoute("news")}    >{navTitles[lang].news}</span></li>
-          <li><span onClick={ () => GoToRoute("games")}   >{navTitles[lang].games}</span></li>
-          <li><span onClick={ () => GoToRoute("about")}   >{navTitles[lang].about}</span></li>
-          <li><span onClick={ () => GoToRoute("gallery")} >{navTitles[lang].gallery}</span></li>        
-          <li><a href="#" target='_blank'><span>{navTitles[lang].store}</span></a></li>
         </div>
-
-      </div>      
-    </div>
+        <div className='interactable-navbar-mobile'>
+          <button id='nav-mobile-btn' className={`${mobileShow?'cross':''}`} 
+            onClick={ () => { setMobileShow(!mobileShow) } } >
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </button>
+          <div className={`navButtons ${mobileShow?'show':''}`}>
+            <li><span onClick={ () => GoToRoute("news")}>{navTitles[lang].news}</span></li>
+            <li><span onClick={ () => GoToRoute("games")}>{navTitles[lang].games}</span></li>
+            <li><span onClick={ () => GoToRoute("about")}>{navTitles[lang].about}</span></li>
+            <li><span onClick={ () => GoToRoute("gallery")}>{navTitles[lang].gallery}</span></li>
+            <li><a href="#" target='_blank'><span>{navTitles[lang].store}</span></a></li>            
+          </div>      
+        </div>
+      </div>
+    </>    
   )
 }
 
