@@ -76,15 +76,13 @@ body {
 }
 
 .icon-btn{
-  max-width: 80px;  
-  max-height: 80px;  
+  max-width: 80%;
+  max-height: 100%;    
   aspect-ratio: 1/1;
+
+  /* width: 70%; */
+  align-content: center;
   
-  /* 
-  background-color: #1877f2;
-  mix-blend-mode: multiply; 
-  background-blend-mode: multiply; 
-  */
   transition: color var(--transition-time);
 }
 
@@ -98,11 +96,6 @@ body {
   transform: scale(1.1);  
   fill: var(--accent-color);
 }
-
-/* .icon-btn img{
-  height: 100%;
-  aspect-ratio: 1/1;
-} */
 
 .splashScreen{
   z-index: 1;
