@@ -211,3 +211,46 @@ body {
 .cross .bar3 {
   transform: translate(0, -10px) rotate(45deg);
 }
+
+/* 
+sm	640px	Mobile phones
+md	768px	Tablets & large phones
+lg	1024px	Small laptops, iPads
+xl	1280px	Laptops/desktops
+2xl	1920px Ultra wide, etc
+*/
+
+@media (max-width: 767px) {
+  #background-image-div{
+    background-color: hsl(239, 67%, 51%);
+    background-blend-mode: multiply;
+  }
+}
+
+@media (min-width: 768px) {
+  #background-image-div{
+    background-color: hsl(176, 67%, 51%);
+    background-blend-mode: multiply;
+  }
+}
+
+@media (min-width: 1024px) {
+  #background-image-div{
+    background-color: hsl(85, 67%, 51%);
+    background-blend-mode: multiply;
+  }
+}
+
+@media (min-width: 1280px) {
+  #background-image-div{
+    background-color: hsl(35, 67%, 51%);
+    background-blend-mode: multiply;
+  }
+}
+
+@media (min-width: 1920px) {
+  #background-image-div{
+    background-color: hsl(0, 67%, 51%);
+    background-blend-mode: multiply;
+  }
+}

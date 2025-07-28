@@ -138,6 +138,35 @@
     cursor: pointer;
 }
 
+/*@media (max-width: 767px) {
+    .frame-bg{        
+        max-width: 90vw;
+        max-height: 80vh;    
+        height: 60vh;    
+    }
+
+    .frame-bg::before{
+        background-image: none;
+    }
+}
+
+ @media (min-width: 768px) {
+    .frame-bg{
+        max-width: 1565px;    
+        max-height: 60vh;        
+        width: 80vw;
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .frame-bg{
+        max-width: 1565px;    
+        max-height: 60vh;
+        width: 80vw;
+    }
+} */
+
 @media (min-width: 1280px) {
   .gallery h3{
         font-size: 2.2rem;
