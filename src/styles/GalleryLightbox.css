@@ -174,7 +174,9 @@
 }
 
 .lightbox-info-overlay p{
+    transition: font-size var(--transition-time);
     text-align: justify;
+    font-size: 1.5rem;
 }
 
 .lightbox-info-title, .lightbox-info-subtitle{
@@ -183,13 +185,48 @@
 }
 
 .lightbox-info-title{
+    transition: all var(--transition-time);
     font-size: 2.3rem;
 }
 
 .lightbox-info-subtitle{
+    transition: all var(--transition-time);
     font-size: 1.5rem;
 }
 
 .lightbox-info-overlay .cross{
     align-self: end;
+}
+
+@media (max-width: 767px) {
+    .lightbox-info-overlay p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .lightbox-info-overlay p{
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .lightbox-info-overlay p{
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .lightbox-info-title{
+        font-size: 3.5rem;
+    }
+
+    .lightbox-info-subtitle{
+        font-size: 2.5rem;
+    }
+
+    .lightbox-info-overlay p{        
+        font-size: 1.75rem;
+    }
 }

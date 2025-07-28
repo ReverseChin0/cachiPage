@@ -215,3 +215,9 @@ article.nextSlide {
 .gallery-carrousel.hide{
   display: none;
 }
+
+@media (min-width: 1920px) {
+  .section-about{
+    font-size: 1.75rem;
+  }
+}
