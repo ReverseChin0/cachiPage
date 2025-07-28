@@ -6,15 +6,12 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-around;
 
     background-color: rgba(var(--background-color-rgb), 0.75);
     border-top: var(--secondary-color) 2px solid;
 }
 
-.footer-bar>*{
-    flex-grow: 1;
-    text-align: center;
-}
 
 .footer-bar p{
     margin: 0.3rem 0;
@@ -22,8 +19,7 @@
 }
 
 .language-displayer{
-    margin-top: 0.25rem;
-    width: 30%;
+    margin-top: 0.25rem;    
 }
 
 .language-displayer p{
@@ -42,18 +38,21 @@
 
 #language-btn{    
 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    justify-content: center;
-
-    /* transition: color var(--transition-time), opacity var(--transition-time); */
+    justify-content: center;    
 
     cursor: pointer;
+    pointer-events: none;
 
     opacity: 0;
-
-    transform: translateX(50%);
 }
 
 #language-btn svg{
@@ -66,6 +65,13 @@
 }  
 
 #language-selector{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     display: flex;        
     align-items: center;    
     justify-content: center;    
@@ -73,8 +79,7 @@
     transition: opacity var(--transition-time);
 
     opacity: 0;
-    pointer-events: none;
-    transform: translateX(-50%);
+    pointer-events: none;    
 }
 
 #language-selector p{
@@ -103,4 +108,19 @@
 #language-selector.show-selector,#language-btn.show-selector{
     opacity: 1;
     pointer-events: all;
+}
+
+.language-container{    
+    max-width: 40%;
+    width: 50vw;
+}
+
+@media (max-width: 767px) {
+   .footer-bar{
+        flex-direction: column-reverse;
+   }
+
+   #language-container{
+        min-height: 1rem;
+   }
 }
