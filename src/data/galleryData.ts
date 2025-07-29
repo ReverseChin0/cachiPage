@@ -3,7 +3,7 @@ import type { MultiLangGalleryItem } from '../data/types.ts';
 export const galleryDataText:MultiLangGalleryItem[] = [
   {
     id: "gal_1",
-    downloadImage: "/img/gallery/studio_20240302_EX.png",
+    downloadImage: "/studio_20240302_EX.png",
     previewImage: "/img/gallery/studio_20240302_EX_opt.png",
     thumbnail: "/img/gallery/studio_thumbnail.png",
     translations: {
@@ -39,7 +39,7 @@ export const galleryDataText:MultiLangGalleryItem[] = [
   },
   {
     id: "gal_2",
-    downloadImage: "/img/gallery/studio_20240302_EX.png",
+    downloadImage: "/studio_20240302_EX.png",
     previewImage: "",
     thumbnail: "/testing/1.png",
     translations: {
@@ -75,7 +75,7 @@ export const galleryDataText:MultiLangGalleryItem[] = [
   },
   {
     id: "gal_3",
-    downloadImage: "/img/gallery/studio_20240302_EX.png",
+    downloadImage: "/studio_20240302_EX.png",
     previewImage: "",
     thumbnail: "/testing/2.png",
     translations: {
@@ -111,7 +111,7 @@ export const galleryDataText:MultiLangGalleryItem[] = [
   },
   {
     id: "gal_4",
-    downloadImage: "/img/gallery/studio_20240302_EX.png",
+    downloadImage: "/studio_20240302_EX.png",
     previewImage: "",
     thumbnail: "/testing/3.png",
     translations: {
@@ -147,7 +147,7 @@ export const galleryDataText:MultiLangGalleryItem[] = [
   },
   {
     id: "gal_5",
-    downloadImage: "/img/gallery/studio_20240302_EX.png",
+    downloadImage: "/studio_20240302_EX.png",
     previewImage: "",
     thumbnail: "/testing/4.ico",
     translations: {
@@ -175,7 +175,7 @@ export const galleryDataText:MultiLangGalleryItem[] = [
   },
   {
     id: "gal_6",
-    downloadImage: "/img/gallery/studio_20240302_EX.png",
+    downloadImage: "/studio_20240302_EX.png",
     previewImage: "",
     thumbnail: "/img/logos/LW logo color opt.png",
     translations: {
