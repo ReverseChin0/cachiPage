@@ -1,6 +1,6 @@
+import { getCurrentLanguage, IsOnMain } from '../utility/utility';
 import type { NewsPopupProps } from '../data/types';
 import '../styles/NewsPopup.css'
-import { getCurrentLanguage, IsOnMain } from '../utility/utility';
 
 const NewsPopup = ( { news, delayPassed }: NewsPopupProps ) => {  
 
@@ -12,7 +12,11 @@ const NewsPopup = ( { news, delayPassed }: NewsPopupProps ) => {
 
   return (
     <div id='news-popup' className={delayPassed && isOnMainPage ? `news-popup showNews`:`news-popup`}>
-        <h3>News</h3>              
+        <h3>{
+            language == "ES"? "Noticias" : 
+            language == "FR" ? "Actualités":
+            language == "JP" ? "ニュース": "News"}
+        </h3>              
         <h5>{date} - {news.translation[language].title}</h5>      
     </div>
   )
