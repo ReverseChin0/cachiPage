@@ -67,7 +67,11 @@ const Navbar = () => {
         <div id='interactable-navbar'>
           <div>
             <div className="nav-img">
-              <img onClick={ () => navigate(`/${lang}`)} src="/img/logos/LogoJustText.png" alt="no-logo" />
+              <img onClick={ () =>{
+                const bgDiv = document.getElementById("background-image-div");
+                bgDiv?.classList.remove("blur");
+                navigate(`/${lang}`)
+              }} src="/img/logos/LogoJustText.png" alt="no-logo" />
             </div>
 
             <li><span onClick={ () => GoToRoute("news")}    >{navTitles[lang].news}</span></li>
