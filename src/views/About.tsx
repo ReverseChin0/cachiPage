@@ -28,7 +28,7 @@ const About = () => {
 
   return (  
     <div className='frame-bg'>     
-      <div>
+      <div className='frame-slide-gradient'>
           <div className="section-about">            
             {
               messages.map((message: string, msgIndex: number) => {                    

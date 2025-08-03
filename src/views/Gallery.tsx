@@ -44,7 +44,7 @@ const Gallery = () => {
         !show && <div onClick={closeCarrousel} className="close-carrousel-div"/>
       }
 
-      <div className='frame-bg gallery'> 
+      <div className={`frame-bg gallery`}> 
         <h3>{language == "ES"? "Galeria" : 
              language == "FR" ? "Galerie":
              language == "JP" ? "ギャラリー": "Gallery"}</h3>

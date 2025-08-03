@@ -10,13 +10,12 @@
     bottom: 50%;
     left: 50%;
 
-    max-width: 1565px;
-    /* max-height: 817px; */
-    max-height: 60vh;
-
+    max-width: 1565px;    
     width: 65vw;
 
-    aspect-ratio: 15/8;
+    max-height: 67vh;
+
+    aspect-ratio: 1.916/1;
 
     display: flex;
     justify-content: center;
@@ -40,19 +39,24 @@
 
 .frame-bg > div{
     width: 100%;
-    height: 90%;
-    padding: 1rem 6.5%;
-    overflow: hidden;
-
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
+    height: 100%;    
 }
 
 .frame-bg > h2{
     width: 100%;
     margin-left: 8%;        
     margin-bottom: 0;
+}
+
+.frame-slide-gradient{
+    mask: url("/img/helper/SmallerFrameWhiteMask.svg");
+    mask-size: cover;
+
+    background: linear-gradient( 90deg,
+        rgba(var(--main-frame-arrow-fade-color),0.3) 0%,
+        rgba(0, 0, 0, 0) 9%,
+        rgba(0, 0, 0, 0) 91%,
+        rgba(var(--main-frame-arrow-fade-color),0.3) 100%);
 }
 
 .news-scroll,.gal-scroll{
