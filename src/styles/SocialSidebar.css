@@ -1,25 +1,51 @@
 .sidebar{
-    --side-height: 20vh;
-    max-width: 6vw;
+
+    --side-height: 24vh; /*226px*/
+    --side-width: 80px;
+
+    max-width: var(--side-width);
+    height: 130px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 1rem;
+    justify-content: space-evenly;    
 
     color: var(--primary-color);    
-    background: linear-gradient(90deg,var(--background-color) 0%, var(--background-color) 45%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg,var(--background-color) 0%, rgba(0, 0, 0, 0) 100%);
     
     position: absolute;
     top: calc(50% - calc(var(--side-height)*0.5));
         
-    height: var(--side-height);
-    padding: 1rem 0;
+    height: var(--side-height);    
 }
 
 .sidebar > a{
-    height: calc(100% - calc(1rem * 0.3)) ;    
+    /* height: calc(100% - calc(1rem * 0.3));     */
 }
+
+.icon-btn{
+  max-width: 40px;
+  max-height: 100%;    
+  aspect-ratio: 1/1;
+
+  width: 100%;
+  align-content: center;
+  
+  transition: color var(--transition-time);
+}
+
+.icon-btn > svg{  
+  fill: var(--primary-color);
+  transform: scale(1);
+  transition: fill var(--transition-time), transform var(--transition-time);
+}
+
+.icon-btn > svg:hover{
+  transform: scale(1.1);  
+  fill: var(--accent-color);
+}
+
 
 @media (max-width: 767px) {
    .sidebar{
