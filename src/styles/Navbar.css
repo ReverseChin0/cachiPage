@@ -1,5 +1,6 @@
 .navbar{
     height: 20vh;   
+    background: linear-gradient(180deg,var(--background-color) 0%, rgba(0, 0, 0, 0) 60%);
 }
 
 #interactable-navbar li{
