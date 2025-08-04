@@ -53,10 +53,10 @@
     mask-size: cover;
 
     background: linear-gradient( 90deg,
-        rgba(var(--main-frame-arrow-fade-color),0.3) 0%,
+        rgba(var(--main-frame-arrow-fade-color),0.2) 0%,
         rgba(0, 0, 0, 0) 9%,
         rgba(0, 0, 0, 0) 91%,
-        rgba(var(--main-frame-arrow-fade-color),0.3) 100%);
+        rgba(var(--main-frame-arrow-fade-color),0.2) 100%);
 }
 
 .news-scroll,.gal-scroll{
@@ -79,14 +79,41 @@
     margin-block-end: 0.6em;
 }
 
-.frame-bg > div.news,.frame-bg > div.gal-sv{
-    width: 88%;
+.news,.gal-sv{
+    /* width: 88%;
     height: 85%;
-    transform: translateX(-1%);
+    transform: translateX(-1%); */
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: end;
+
+    grid-template-rows: 20% 74% 6%;
+    grid-template-columns: 9% 82% 9%;
 }
 
-.frame-bg > div.gal-sv{ 
-    height: 80%;
+.news-main-title,.gallery-carrousel-title{    
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.news-scroll,.gal-scroll{
+    grid-area: 2 / 2 / 3 / 3;
+}
+     
+.games-content{
+    display: grid;
+    grid-template-rows: 12% 80% 8%;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.frame-about{
+    display: grid;
+    grid-template-rows: 12% 82% 6%;
+    grid-template-columns: 13% 74% 13%;
+}
+
+.bellefair{
+    font-family: "Bellefair";
 }
 
 .frame-bg.gallery{
@@ -95,10 +122,11 @@
 
 .gallery-grid{
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
+    width: 95%;
 }
 
 .gallery-grid img{
@@ -115,9 +143,7 @@
 
 .gallery h3{
     margin: 0;
-    margin-right: auto;  
-    margin-left: 10%;  
-    transform: translateY(100%);
+    margin-right: auto;       
     font-size: 1.5rem;
 }
 

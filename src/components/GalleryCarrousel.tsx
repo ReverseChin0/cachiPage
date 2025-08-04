@@ -35,7 +35,7 @@ const GalleryCarrousel = (props: GallCarrouselProps) => {
     }, [index, galleryImages]);
 
   return (
-    <div className={show?'gallery-carrousel':'gallery-carrousel hide'}>
+    <div className={`gallery-carrousel frame-slide-gradient ${show?'':'hide'}`}>
           <div className="section-about">            
             {
               galleryImages.map((galleryItem: GalleryItem, imgIndex: number) => {                    

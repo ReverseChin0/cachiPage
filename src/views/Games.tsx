@@ -25,7 +25,7 @@ const Games = () => {
 
   return (
     <div className='frame-bg'>
-      <div>
+      <div className="games-content frame-slide-gradient">
           <div className="section-center">
             {
               games.map((game: GamePropsLocalized, gameIndex: number) => {
@@ -55,11 +55,7 @@ const Games = () => {
                   </article>
                 );
               })
-            }
-
-            <button className="prev" onClick={() => setIndex(index - 1)}/>                          
-
-            <button className="next" onClick={() => setIndex(index + 1)}/>                          
+            }                                  
 
             <div className="dots">
               {games.map((_:GamePropsLocalized, dotIndex:number) => (
@@ -71,6 +67,8 @@ const Games = () => {
               ))}
             </div>
           </div>
+          <button className="games prev" onClick={() => setIndex(index - 1)}/>
+          <button className="games next" onClick={() => setIndex(index + 1)}/>    
       </div>
     </div>
   )

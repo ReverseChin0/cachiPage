@@ -4,15 +4,21 @@ import type { GalleryItem } from '../data/types';
 type galleryScrollviewProps = {
   data: GalleryItem[];
   onClickedGallImg: (arg: number) => void;
-  show?:boolean
+  show?:boolean;
+  language?: string;
 }
 
 const GalleryScrollView = (props: galleryScrollviewProps) => {
 
-  const { data, onClickedGallImg, show } = props;
+  const { data, onClickedGallImg, show, language } = props;
 
   return (
-    <div className={show? "gal-sv" : "gal-sv hide" }>
+    <div className={`gal-sv ${show?'':'hide'}`}>
+       <h3 className="gallery-carrousel-title">{
+             language == "ES"? "Galeria" : 
+             language == "FR" ? "Galerie":
+             language == "JP" ? "ギャラリー": "Gallery"}
+        </h3>
         <div className="gal-scroll">            
             <div className='gallery-grid'>
             {
@@ -25,7 +31,7 @@ const GalleryScrollView = (props: galleryScrollviewProps) => {
                     <img src={imageData.thumbnail} alt="no_thumbnail_available" />
                 </div>
                 })
-            }
+            }            
             </div>
         </div>
     </div>
