@@ -199,7 +199,7 @@ xl	1280px	Laptops/desktops
 2xl	1920px Ultra wide, etc
 */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   #background-image-div{
     background-color: hsl(239, 67%, 51%);
     background-blend-mode: multiply;
@@ -232,4 +232,4 @@ xl	1280px	Laptops/desktops
     background-color: hsl(0, 67%, 51%);
     background-blend-mode: multiply;
   }
-}
+} */
