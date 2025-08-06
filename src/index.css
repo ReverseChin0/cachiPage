@@ -18,6 +18,7 @@
   --news-popup-background: url('/img/helper/NewsfeedBox.png');
   --main-frame-background: url('/img/helper/SmallerFrame.png');
   --slides-arrow-background: url('/icons/system_arrow.png');
+  --white-mask: url('/img/helper/SmallerFrameWhiteMask.svg');
   --main-frame-arrow-fade-color: 188, 176, 255;
 
   --2k-res: 2560px;

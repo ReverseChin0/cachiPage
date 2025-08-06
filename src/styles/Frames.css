@@ -49,7 +49,7 @@
 }
 
 .frame-slide-gradient{
-    mask: url("/img/helper/SmallerFrameWhiteMask.svg");
+    mask: var(--white-mask);
     mask-size: cover;
 
     background: linear-gradient( 90deg,
