@@ -71,11 +71,10 @@ const Navbar = () => {
         onMouseEnter={ () => { showNavbar(true);} }
         onMouseLeave={ () => { showNavbar(false); } }>
         <div id='interactable-navbar'>
-          <div>
-            <div className="nav-img">
+          <div className="nav-img">
               <img onClick={ GoBackToMain } src="/img/logos/LogoJustText.png" alt="no-logo" />
-            </div>
-
+          </div>
+          <div className='nav-items'>            
             <li><span onClick={ () => GoToRoute("news")}    >{navTitles[lang].news}</span></li>
             <li><span onClick={ () => GoToRoute("games")}   >{navTitles[lang].games}</span></li>
             <li><span onClick={ () => GoToRoute("about")}   >{navTitles[lang].about}</span></li>
