@@ -48,3 +48,8 @@ export function GetGalleryFromLanguage(originalGallery:MultiLangGalleryItem[], l
         };
     });
 }
+
+export function hideNavbar() {
+    const interNavbar = document.getElementById("interactable-navbar");
+    interNavbar?.classList.remove("show-navbar");
+}
