@@ -5,17 +5,26 @@ import { useCurrentLanguage } from "../hooks/UseCurrentLanguage";
 interface UseClickOutsideNavbarProps {
   frameBgRef: RefObject<HTMLDivElement | null>;
   hideNavbar: () => void;
+  locked?: boolean;
 }
 
-export function useClickOutsideNavbar({
+export function useClickOutsideNavbar(
+  {
   frameBgRef,
   hideNavbar,
-}: UseClickOutsideNavbarProps) {
+  locked
+  }
+ : UseClickOutsideNavbarProps) {
   const language = useCurrentLanguage();
   const navigate = useNavigate();
 
   useEffect(() => {
     function handleDocumentClick(e: MouseEvent) {
+      console.log("locked", locked);
+      
+      if(locked !== undefined && locked)
+        return;
+
       const navbar = document.querySelector(".navbar");
       if (navbar && navbar.contains(e.target as Node)) {
         return;
@@ -34,5 +43,5 @@ export function useClickOutsideNavbar({
     return () => {
       document.removeEventListener("mousedown", handleDocumentClick);
     };
-  }, [navigate, language, frameBgRef, hideNavbar]);
+  }, [navigate, language, frameBgRef, hideNavbar, locked]);
 }

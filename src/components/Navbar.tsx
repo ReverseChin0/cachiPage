@@ -29,7 +29,7 @@ const Navbar = () => {
     const newRoute = `/${lang}/${Route}`;
     //console.log("GoToRoute", "previous",loc.pathname," == ", `/${lang}/${Route}` == loc.pathname );
 
-    console.log("==?", newRoute == loc.pathname);
+    //console.log("==?", newRoute == loc.pathname);
     const backgroundDiv = document.getElementById("background-image-div");
     
     if(newRoute == loc.pathname){

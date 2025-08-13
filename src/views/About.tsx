@@ -1,17 +1,24 @@
-import { useEffect, useMemo, useState } from 'react';
-import { aboutdata } from '../data/infoAbout'
-import '../styles/Frames.css'
+import { useClickOutsideNavbar } from '../utility/useClickOutsideNavbar';
 import { useCurrentLanguage } from '../hooks/UseCurrentLanguage';
+import { hideNavbar } from "../utility/utility";
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { aboutdata } from '../data/infoAbout';
+import '../styles/Frames.css'
 
 const About = () => {  
   
   const language = useCurrentLanguage();
+  const frameBgRef = useRef<HTMLDivElement>(null);
 
   // Get the messages based on current language
   const messages = useMemo(() => aboutdata[language], [language]);
 
   const [index, setIndex] = useState(0);  
   
+  useClickOutsideNavbar({
+      frameBgRef,
+      hideNavbar,
+  });
 
   useEffect(() => {
     const lastIndex = messages.length - 1;
@@ -21,13 +28,12 @@ const About = () => {
     if(index > lastIndex){
       setIndex(0);
     }          
-
-    //console.log(messages);    
+    
 
   }, [index, messages]);  
 
   return (  
-    <div className='frame-bg'>     
+    <div className='frame-bg' ref={frameBgRef}>     
       <div className='frame-about frame-slide-gradient'>
           <div className="section-about bellefair">            
             {

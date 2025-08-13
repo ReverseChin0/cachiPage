@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCurrentLanguage } from '../hooks/UseCurrentLanguage';
 import { gamesData } from '../data/infoGame';
 import '../styles/Slides.css'
 import type { GamePropsLocalized } from "../data/types";
+import { hideNavbar } from "../utility/utility";
+import { useClickOutsideNavbar } from "../utility/useClickOutsideNavbar";
 
 
 const Games = () => {
 
-  const language = useCurrentLanguage(); 
+  const language = useCurrentLanguage();
+  const frameBgRef = useRef<HTMLDivElement>(null);
 
   const [games] = useState(gamesData);
   const [index, setIndex] = useState(0);
@@ -23,8 +26,13 @@ const Games = () => {
       
   }, [index, games]);  
 
+   useClickOutsideNavbar({
+        frameBgRef,
+        hideNavbar,
+    });
+
   return (
-    <div className='frame-bg'>
+    <div className='frame-bg' ref={frameBgRef}>
       <div className="games-content frame-slide-gradient">
           <div className="section-center">
             {

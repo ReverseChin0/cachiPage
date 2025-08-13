@@ -3,9 +3,11 @@ import GalleryScrollView from '../components/GalleryScrollView';
 import GalleryLightBox from '../components/GalleryLightBox';
 import { GetGalleryFromLanguage } from '../utility/utility';
 import { galleryDataText } from '../data/galleryData';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { hideNavbar } from "../utility/utility";
 import '../styles/Frames.css';
 import { useCurrentLanguage } from '../hooks/UseCurrentLanguage';
+import { useClickOutsideNavbar } from '../utility/useClickOutsideNavbar';
 
 const Gallery = () => {
 
@@ -16,8 +18,10 @@ const Gallery = () => {
   const [ lgboxActive, setLgboxActive ] = useState(false);
   const [ indexInitial, setInitial ] = useState<number|null>(null);
 
+  const frameBgRef = useRef<HTMLDivElement>(null);
+
   const clickedGalleryImg = (index:number) => {
-    console.log("clicked Img 😱",index);
+    //console.log("clicked Img 😱",index);
     setShow(!show);
     setInitial(index);
   }
@@ -28,7 +32,7 @@ const Gallery = () => {
   }
 
   const closeLightBox = () => {
-    console.log("DAMN CLOSE THAT SHIT");
+    //console.log("DAMN CLOSE THAT SHIT");
     
     setLgboxActive(false)
   }
@@ -37,6 +41,12 @@ const Gallery = () => {
     setShow(true);
   }
 
+  useClickOutsideNavbar({
+      frameBgRef,
+      hideNavbar,      
+      locked: lgboxActive || !show,
+  });
+
   return (
     <>
     
@@ -44,7 +54,7 @@ const Gallery = () => {
         !show && <div onClick={closeCarrousel} className="close-carrousel-div"/>
       }
 
-      <div className={`frame-bg gallery`}>        
+      <div className={`frame-bg gallery`} ref={frameBgRef}>        
         <GalleryScrollView data={data} onClickedGallImg={clickedGalleryImg} show={show} />
         <GalleryCarrousel initial={indexInitial} data={data} show={!show} selectImage={setSelectedLgBoxImage}/>
       </div>
